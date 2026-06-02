@@ -116,12 +116,12 @@
         background: #C5A080;
         width: 60px;
       }
-      .benchmark-row {
-        transition: all 0.25s ease;
+
+      #timeline-track {
+        scrollbar-width: none;
       }
-      .benchmark-row:hover {
-        background-color: rgba(197, 160, 128, 0.08);
-        transform: scale(1.005);
+      #timeline-track::-webkit-scrollbar {
+        display: none;
       }
     </style>
 </head>
@@ -133,9 +133,8 @@
 <span class="font-display-lg text-headline-md font-bold text-snow-white">HY Ingeniería S.A.U.</span>
 </div>
 <nav class="hidden md:flex gap-gutter font-subhead-tech text-subhead-tech uppercase">
-<a class="text-snow-white hover:text-bronze-accent transition-colors" href="#proyectos">Proyectos</a>
 <a class="text-snow-white hover:text-bronze-accent transition-colors" href="#servicios">Servicios</a>
-<a class="text-snow-white hover:text-bronze-accent transition-colors" href="#ventajas">Ventajas</a>
+<a class="text-snow-white hover:text-bronze-accent transition-colors" href="#proyectos">Proyectos</a>
 <a class="text-snow-white hover:text-bronze-accent transition-colors" href="#ubicacion">Ubicación</a>
 </nav>
 <a class="bg-bronze-accent text-primary px-6 py-2 font-subhead-tech uppercase font-bold hover:bg-snow-white transition-colors" href="#contacto">
@@ -208,10 +207,10 @@
 <section id="estructura-operativa" class="py-section-gap bg-surface-container-lowest overflow-hidden">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="fade-in-left opacity-0 -translate-x-8 transition-all duration-1000 ease-out">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Estructura Operativa</span>
-<h2 class="font-display-lg text-headline-md md:text-display-lg-mobile text-primary mb-8 leading-tight">
-                        Tecnología de Corea,<br/>Fabricación en Salta
+<div class="fade-in-left opacity-0 -translate-x-8 transition-all duration-[5000ms] ease-out">
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Estructura Operativa</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">
+                        Tecnología de Corea,<br class="hidden md:inline"/>Fabricación en Salta
                     </h2>
 <div class="space-y-6 text-body-lg text-charcoal-text">
 <div class="flex gap-4 items-start">
@@ -229,7 +228,7 @@
                         </p>
 </div>
 </div>
-<div class="relative fade-in-right opacity-0 translate-x-8 transition-all duration-1000 ease-out">
+<div class="relative fade-in-right opacity-0 translate-x-8 transition-all duration-[5000ms] ease-out">
 <div class="absolute -top-10 -right-10 w-64 h-64 border border-bronze-accent/20 rounded-full"></div>
 <div class="bg-primary p-12 relative overflow-hidden group">
 <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #C5A080 1px, transparent 1px); background-size: 20px 20px;"></div>
@@ -245,268 +244,315 @@
 </div>
 </div>
 </section>
-<!-- Trayectoria y Proyectos Hitos -->
-<section class="py-section-gap bg-white border-b border-surface-variant/30" id="proyectos">
-<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-xl">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Hitos Clave</span>
-<h2 class="font-display-lg text-headline-md text-primary">Trayectoria de Proyectos en Argentina</h2>
-</div>
-<div class="line-accent mb-4 hidden md:block"></div>
-</div>
-
-<div id="timeline-container" class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-16 relative">
-<!-- Timeline lines for desktop -->
-<div class="absolute top-[40px] left-0 right-0 h-0.5 bg-bronze-accent/20 hidden md:block z-0"></div>
-<div class="absolute top-[304px] left-0 right-0 h-0.5 bg-bronze-accent/20 hidden md:block z-0"></div>
-
-<!-- Hito 1: 1980 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold mb-6 shadow-lg">1980</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Fundación de Casa Matriz</h3>
-<p class="text-body-md text-outline text-sm">Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur.</p>
-</div>
-
-<!-- Hito 2: 2005-14 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold mb-6 shadow-lg">2005-14</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Certificaciones Globales</h3>
-<p class="text-body-md text-outline text-sm">Obtención de las certificaciones clave ISO 14001, KS y marca CE (Unión Europea).</p>
-</div>
-
-<!-- Hito 3: 2011-12 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold mb-6 shadow-lg">2011-12</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Planta Piloto Cauchari</h3>
-<p class="text-body-md text-outline text-sm">Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio.</p>
-</div>
-
-<!-- Hito 4: 2016 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold mb-6 shadow-lg">2016</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Filial Argentina</h3>
-<p class="text-body-md text-outline text-sm">Establecimiento de la filial y primera planta de fabricación local de tanques FRP coreanos.</p>
-</div>
-
-<!-- Hito 5: 2020 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold mb-6 shadow-lg">2020</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Planta Demo NOA</h3>
-<p class="text-body-md text-outline text-sm">Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral.</p>
-</div>
-
-<!-- Hito 6: 2022 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold mb-6 shadow-lg">2022</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Proyecto NOA - Fase 1</h3>
-<p class="text-body-md text-outline text-sm">Fabricación e instalación exitosa de 109 tanques FRP (11.035 m³ de capacidad acumulada para litio).</p>
-</div>
-
-<!-- Hito 7: 2024 -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-primary-container border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold mb-6 shadow-lg">2024</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">Proyecto NOA - Fase 2</h3>
-<p class="text-body-md text-outline text-sm">Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas.</p>
-</div>
-
-<!-- Hito 8: 2026+ -->
-<div class="timeline-item opacity-0 translate-y-8 transition-all duration-700 ease-out relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
-<div class="w-20 h-20 rounded-full bg-bronze-accent border-4 border-primary-container flex items-center justify-center text-primary-container text-xl font-extrabold mb-6 shadow-lg">2026+</div>
-<h3 class="font-headline-md text-[18px] text-primary mb-2">EPC & Expansión</h3>
-<p class="text-body-md text-outline text-sm">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
-</div>
-</div>
-</div>
-</section>
 
 <!-- Línea de Suministro (Grid) -->
 <section class="py-section-gap bg-background" id="servicios">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-xl">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Capacidades Industriales</span>
-<h2 class="font-display-lg text-headline-md text-primary">Línea de Suministro Especializada</h2>
+<div class="max-w-3xl">
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Capacidades Industriales</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">Línea de Suministro Especializada</h2>
 </div>
 <div class="line-accent mb-4 hidden md:block"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-metric-gap">
+<div class="flex flex-col lg:flex-row gap-4 w-full min-h-[450px] items-stretch">
 <!-- Card 1 -->
-<div class="bg-white p-8 border-t-4 border-bronze-accent transition-all duration-300 industrial-card-hover flex flex-col h-full">
+<div class="flex-1 lg:hover:flex-[2.8] bg-white p-8 border-t-4 border-bronze-accent transition-all duration-500 ease-in-out shadow-md hover:shadow-2xl overflow-hidden group flex flex-col justify-between h-auto">
+<div>
 <span class="material-symbols-outlined text-4xl text-slate-navy mb-6">rebase_edit</span>
 <h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Tanques y Reactores FRP</h4>
-<p class="text-body-md text-outline mb-6 flex-grow">Reforzados con fibra de vidrio para máxima resistencia química.</p>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter">Fabricación Local</span>
+<p class="text-body-md text-outline mb-4">Reforzados con fibra de vidrio para máxima resistencia química en minería.</p>
+<!-- Extra Info grid hidden by default -->
+<div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden border-t border-surface-variant/30 pt-4">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] text-slate-navy">
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetro Máx</span>
+<span class="font-bold text-primary">Ø 5.0 m (terrestre)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Volumen / Unit</span>
+<span class="font-bold text-primary">1 a 200 m³ (esp. ~300 m³)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Capacidad Anual</span>
+<span class="font-bold text-primary">~18.000 m³ (150 u)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Resinas</span>
+<span class="font-bold text-primary">Vinylester, Epoxy, Isop.</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Longitud Máx</span>
+<span class="font-bold text-primary">11.0 m</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Normativas</span>
+<span class="font-bold text-primary">ASTM D2996, ANSI, IRAM</span>
+</div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-4 block">Fabricación Local</span>
 </div>
 <!-- Card 2 -->
-<div class="bg-white p-8 border-t-4 border-bronze-accent transition-all duration-300 industrial-card-hover flex flex-col h-full">
+<div class="flex-1 lg:hover:flex-[2.8] bg-white p-8 border-t-4 border-bronze-accent transition-all duration-500 ease-in-out shadow-md hover:shadow-2xl overflow-hidden group flex flex-col justify-between h-auto">
+<div>
 <span class="material-symbols-outlined text-4xl text-slate-navy mb-6">propane_tank</span>
-<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Tanques de Acero Inoxidable (STS)</h4>
-<p class="text-body-md text-outline mb-6 flex-grow">Acabados industriales de alta precisión según normas internacionales.</p>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter">Normas Coreanas</span>
+<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Tanques de Acero Inox (STS)</h4>
+<p class="text-body-md text-outline mb-4">Acabados de alta precisión para dimensiones que superan los límites del FRP.</p>
+<!-- Extra Info grid hidden by default -->
+<div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden border-t border-surface-variant/30 pt-4">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] text-slate-navy">
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetro Máx</span>
+<span class="font-bold text-primary">Sin Límite (Field-Erected)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Materiales</span>
+<span class="font-bold text-primary">SS 316L, 304, Duplex, CS</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Construcción</span>
+<span class="font-bold text-primary">Modular de 4 secciones</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Aislamiento</span>
+<span class="font-bold text-primary">Lana Mineral / Cerámica</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Soldadura</span>
+<span class="font-bold text-primary">TIG, MIG, SAW Certificada</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Código Diseño</span>
+<span class="font-bold text-primary">ASME VIII Div. 1, API</span>
+</div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-4 block">Normas Coreanas</span>
 </div>
 <!-- Card 3 -->
-<div class="bg-white p-8 border-t-4 border-bronze-accent transition-all duration-300 industrial-card-hover flex flex-col h-full">
+<div class="flex-1 lg:hover:flex-[2.8] bg-white p-8 border-t-4 border-bronze-accent transition-all duration-500 ease-in-out shadow-md hover:shadow-2xl overflow-hidden group flex flex-col justify-between h-auto">
+<div>
 <span class="material-symbols-outlined text-4xl text-slate-navy mb-6">schema</span>
 <h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Tuberías y Piping FRP</h4>
-<p class="text-body-md text-outline mb-6 flex-grow">Sistemas de transporte de fluidos altamente corrosivos.</p>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter">Resistencia Extrema</span>
+<p class="text-body-md text-outline mb-4">Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación.</p>
+<!-- Extra Info grid hidden by default -->
+<div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden border-t border-surface-variant/30 pt-4">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] text-slate-navy">
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetros</span>
+<span class="font-bold text-primary">1" a 48" de paso nominal</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Resistencia</span>
+<span class="font-bold text-primary">Salmueras Li, H₂SO₄, NaOH</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Procesos</span>
+<span class="font-bold text-primary">Filament Winding / Hand Lay</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Productos</span>
+<span class="font-bold text-primary">Tuberías, codos, bridas, tees</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Aplicaciones</span>
+<span class="font-bold text-primary">Líneas de proceso y ductos</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Normativas</span>
+<span class="font-bold text-primary">ASTM D2996, ANSI, IRAM</span>
+</div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-4 block">Resistencia Extrema</span>
 </div>
 <!-- Card 4 -->
-<div class="bg-white p-8 border-t-4 border-bronze-accent transition-all duration-300 industrial-card-hover flex flex-col h-full">
+<div class="flex-1 lg:hover:flex-[2.8] bg-white p-8 border-t-4 border-bronze-accent transition-all duration-500 ease-in-out shadow-md hover:shadow-2xl overflow-hidden group flex flex-col justify-between h-auto">
+<div>
 <span class="material-symbols-outlined text-4xl text-slate-navy mb-6">heat_pump</span>
-<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Bombas Químicas Especiales</h4>
-<p class="text-body-md text-outline mb-6 flex-grow">Ingeniería Han Young Co. Ltd directamente desde Corea.</p>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter">Exclusividad HY</span>
+<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Bombas Especiales</h4>
+<p class="text-body-md text-outline mb-4">Equipamiento industrial de alta gama importado de la casa matriz en Corea.</p>
+<!-- Extra Info grid hidden by default -->
+<div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden border-t border-surface-variant/30 pt-4">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] text-slate-navy">
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Origen</span>
+<span class="font-bold text-primary">Han Young Co. Ltd (Corea)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Materiales</span>
+<span class="font-bold text-primary">SS316, PVDF, PP, FRP</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Tipos</span>
+<span class="font-bold text-primary">Centrífuga, Magnética, Vert.</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Entregadas</span>
+<span class="font-bold text-primary">211 bombas en proyectos NOA</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Certificaciones</span>
+<span class="font-bold text-primary">ISO 14001, KS, CE (EU)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Servicios</span>
+<span class="font-bold text-primary">Importación, aduana y SV</span>
+</div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-4 block">Exclusividad HY</span>
 </div>
 <!-- Card 5 -->
-<div class="bg-white p-8 border-t-4 border-bronze-accent transition-all duration-300 industrial-card-hover flex flex-col h-full">
+<div class="flex-1 lg:hover:flex-[2.8] bg-white p-8 border-t-4 border-bronze-accent transition-all duration-500 ease-in-out shadow-md hover:shadow-2xl overflow-hidden group flex flex-col justify-between h-auto">
+<div>
 <span class="material-symbols-outlined text-4xl text-slate-navy mb-6">engineering</span>
-<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Instalación y Servicio Técnico</h4>
-<p class="text-body-md text-outline mb-6 flex-grow">Equipo residente en Salta para mantenimiento preventivo y correctivo.</p>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter">Soporte Local</span>
+<h4 class="font-headline-md text-[20px] text-primary mb-4 leading-snug">Instalación y Servicio</h4>
+<p class="text-body-md text-outline mb-4">Equipo técnico residente en Campo Quijano para soporte preventivo y correctivo.</p>
+<!-- Extra Info grid hidden by default -->
+<div class="max-h-0 opacity-0 group-hover:max-h-[250px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden border-t border-surface-variant/30 pt-4">
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] text-slate-navy">
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Respuesta</span>
+<span class="font-bold text-primary">En 24 a 72 horas en el sitio</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Radio Servicio</span>
+<span class="font-bold text-primary">≤ 500 km (Salar del NOA)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Servicios</span>
+<span class="font-bold text-primary">Montaje, piping, laminado</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Comisionamiento</span>
+<span class="font-bold text-primary">Start-up con supervisión KR</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Movilidad</span>
+<span class="font-bold text-primary">Taller rodante apto altura</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] tracking-wider block">Guardia</span>
+<span class="font-bold text-primary">Operativa 24/7 en campo</span>
+</div>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-4 block">Soporte Local</span>
 </div>
 </div>
 </div>
 </section>
-<!-- Ventaja Competitiva (Tabla) -->
-<section class="py-section-gap bg-surface-container-low" id="ventajas">
-<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="text-center mb-16">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Benchmark del Mercado</span>
-<h2 class="font-display-lg text-headline-md text-primary">Ventaja Estructural Competitiva</h2>
+
+<!-- Trayectoria y Proyectos Hitos (Sticky horizontal scroll section) -->
+<section class="relative h-[250vh]" id="proyectos">
+<!-- Sticky viewport wrapper -->
+<div class="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-white border-b border-surface-variant/30">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop mb-8">
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Hitos Clave</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">Trayectoria de Proyectos en Argentina</h2>
 </div>
-<div class="overflow-x-auto shadow-2xl border border-surface-variant">
-<table class="w-full text-left border-collapse bg-white text-[13px] md:text-[15px]">
-<thead>
-<tr class="bg-primary text-snow-white">
-<th class="px-4 py-4 md:px-5 md:py-4 font-subhead-tech uppercase tracking-wider border-r border-snow-white/10 w-[20%]">Dimensión</th>
-<th class="px-4 py-4 md:px-5 md:py-4 font-subhead-tech uppercase tracking-wider border-r border-snow-white/10 opacity-60 w-[40%]">Proveedor Importado</th>
-<th class="px-4 py-4 md:px-5 md:py-4 font-subhead-tech uppercase tracking-wider text-bronze-accent font-bold bg-primary-container/80 relative w-[40%]">
-                  HY Ingeniería S.A.U.
-                  <span class="absolute top-0 right-0 bg-bronze-accent text-primary text-[10px] uppercase font-bold px-2 py-0.5 tracking-wider">Recomendado</span>
-</th>
-</tr>
-</thead>
-<tbody class="text-slate-navy">
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Lead time estándar</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>8 – 16 semanas + logística marítima</span>
+
+<!-- Horizontal timeline viewport -->
+<div class="w-full relative overflow-hidden flex items-center h-[420px]">
+<!-- Scroll Track -->
+<div id="timeline-track" class="flex gap-12 px-margin-mobile md:px-32 relative w-[2500px] h-[400px] transition-transform duration-100 ease-out">
+<!-- Horizontal center line with progress bar -->
+<div class="absolute top-[200px] left-0 right-0 h-0.5 bg-bronze-accent/20 z-0">
+<div id="timeline-progress-bar" class="h-full bg-bronze-accent w-0 transition-all duration-100 ease-out"></div>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>2 – 4 semanas ex-works Campo Quijano</span>
+
+<!-- Hito 1: 1980 (Odd - Content above circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[400px] pb-[240px] relative z-10">
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-1 leading-snug">Fundación de Casa Matriz</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur.</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Respuesta a emergencia</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Re-fabricación en origen (8–16 sem.)</span>
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[160px] transition-all duration-300">1980</div>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>Equipo residente responde en 24 – 72 h</span>
+
+<!-- Hito 2: 2005-14 (Even - Content below circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[400px] pt-[240px] relative z-10">
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold shadow-lg absolute top-[160px] transition-all duration-300">2005-14</div>
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-1 leading-snug">Certificaciones Globales</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Obtención de las certificaciones clave ISO 14001, KS y marca CE (Unión Europea).</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Riesgo de logística</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Alto — puerto, aduana, transporte especial</span>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>Bajo — planta a ~400 km del NOA</span>
+
+<!-- Hito 3: 2011-12 (Odd - Content above circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[400px] pb-[240px] relative z-10">
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-1 leading-snug">Planta Piloto Cauchari</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio.</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Inspección en fabricación</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Remota o costosa (viaje a Asia/EU)</span>
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold shadow-lg absolute bottom-[160px] transition-all duration-300">2011-12</div>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>FAT directo en planta local</span>
+
+<!-- Hito 4: 2016 (Even - Content below circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[400px] pt-[240px] relative z-10">
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute top-[160px] transition-all duration-300">2016</div>
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-2">Filial Argentina</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Establecimiento de la filial y primera planta de fabricación local de tanques FRP coreanos.</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Responsabilidad legal / fiscal</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Contrato off-shore, disputa internacional</span>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>S.A.U. argentina, jurisdicción local</span>
+
+<!-- Hito 5: 2020 (Odd - Content above circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[400px] pb-[240px] relative z-10">
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-1 leading-snug">Planta Demo NOA</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral.</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row border-b border-surface-variant">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Servicio post-entrega</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Gestión remota, sin residentes</span>
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[160px] transition-all duration-300">2020</div>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>Mantenimiento, overhaul, comisionamiento local</span>
+
+<!-- Hito 6: 2022 (Even - Content below circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[400px] pt-[240px] relative z-10">
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute top-[160px] transition-all duration-300">2022</div>
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-2">Proyecto NOA - Fase 1</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Fabricación e instalación exitosa de 109 tanques FRP (11.035 m³ de capacidad acumulada para litio).</p>
 </div>
-</td>
-</tr>
-<tr class="benchmark-row">
-<td class="px-4 py-4 md:px-5 md:py-4 font-bold border-r border-surface-variant">Respaldo técnico</td>
-<td class="px-4 py-4 md:px-5 md:py-4 border-r border-surface-variant">
-<div class="flex items-center gap-2 text-outline/80">
-<span class="material-symbols-outlined text-red-600 text-[20px]">cancel</span>
-<span>Representantes locales sin fábrica</span>
 </div>
-</td>
-<td class="px-4 py-4 md:px-5 md:py-4 bg-bronze-accent/5 font-bold border-l-2 border-bronze-accent">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-bronze-accent text-[20px]">check_circle</span>
-<span>Casa matriz KR (45 años) + planta local</span>
+
+<!-- Hito 7: 2024 (Odd - Content above circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[400px] pb-[240px] relative z-10">
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-1 leading-snug">Proyecto NOA - Fase 2</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas.</p>
 </div>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[160px] transition-all duration-300">2024</div>
+</div>
+
+<!-- Hito 8: 2026+ (Even - Content below circle) -->
+<div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[400px] pt-[240px] relative z-10">
+<div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute top-[160px] transition-all duration-300">2026+</div>
+<div class="text-center px-4 max-w-[260px]">
+<h3 class="font-headline-md text-[18px] text-primary mb-2">EPC & Expansión</h3>
+<p class="text-body-md text-outline text-[13px] leading-relaxed">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
+</div>
+</div>
+
+</div>
 </div>
 </div>
 </section>
+
 <!-- Ubicación Estratégica -->
 <section class="py-section-gap bg-primary text-snow-white relative overflow-hidden" id="ubicacion">
 <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div>
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Hub Logístico NOA</span>
-<h2 class="font-display-lg text-headline-md md:text-display-lg-mobile mb-8">Ubicación Estratégica</h2>
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Hub Logístico NOA</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-snow-white mb-8 leading-tight">Ubicación Estratégica</h2>
 <p class="font-body-lg text-surface-dim mb-8">
                         Nuestra planta en Campo Quijano se posiciona como el centro neurálgico para el Triángulo del Litio. Con un radio de servicio inferior a 500 km hacia los principales salares, garantizamos operatividad ininterrumpida.
                     </p>
@@ -535,7 +581,8 @@
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
 <div>
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase mb-4 block">Hablemos de su Proyecto</span>
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Contacto</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">Hablemos de su Proyecto</h2>
 <div class="space-y-8 mt-4">
 <div>
 <p class="font-subhead-tech text-subhead-tech text-outline uppercase mb-1">Director Regional</p>
@@ -653,8 +700,8 @@
                 statsObserver.observe(statsSection);
             }
 
-            // Timeline Items Animation
-            const timelineContainer = document.querySelector('#timeline-container');
+            // Timeline Items Animation (Staggered Fade-in)
+            const timelineTrack = document.querySelector('#timeline-track');
             const timelineItems = document.querySelectorAll('.timeline-item');
             
             const timelineObserver = new IntersectionObserver((entries) => {
@@ -663,16 +710,78 @@
                         timelineItems.forEach((item, index) => {
                             setTimeout(() => {
                                 item.classList.remove('opacity-0', 'translate-y-8');
-                            }, index * 200); // 200ms stagger
+                            }, index * 150); // 150ms stagger
                         });
                         timelineObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.15 });
+            }, { threshold: 0.1 });
 
-            if (timelineContainer) {
-                timelineObserver.observe(timelineContainer);
+            if (timelineTrack) {
+                timelineObserver.observe(timelineTrack);
             }
+
+            // Horizontal scroll timeline on vertical scroll
+            const proyectosSection = document.querySelector('#proyectos');
+            const timelineProgressBar = document.querySelector('#timeline-progress-bar');
+            
+            const handleTimelineScroll = () => {
+                if (!proyectosSection || !timelineTrack) return;
+                const rect = proyectosSection.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+                let pct = 0;
+                
+                if (rect.top < 0 && rect.bottom > viewHeight) {
+                    const totalScrollable = proyectosSection.clientHeight - viewHeight;
+                    const scrolled = -rect.top;
+                    pct = Math.max(0, Math.min(1, scrolled / totalScrollable));
+                    
+                    // Move track horizontally
+                    const maxTranslate = timelineTrack.clientWidth - window.innerWidth + 160; // offset for padding
+                    if (maxTranslate > 0) {
+                        timelineTrack.style.transform = `translateX(-${pct * maxTranslate}px)`;
+                    }
+                } else if (rect.top >= 0) {
+                    // Reset to beginning
+                    timelineTrack.style.transform = 'translateX(0px)';
+                    pct = 0;
+                } else if (rect.bottom <= viewHeight) {
+                    // Lock at the end
+                    const maxTranslate = timelineTrack.clientWidth - window.innerWidth + 160;
+                    if (maxTranslate > 0) {
+                        timelineTrack.style.transform = `translateX(-${maxTranslate}px)`;
+                    }
+                    pct = 1;
+                }
+
+                // Update progress bar width
+                if (timelineProgressBar) {
+                    timelineProgressBar.style.width = (pct * 100) + '%';
+                }
+
+                // Highlight circle near the center of the viewport
+                const viewportCenter = window.innerWidth / 2;
+                timelineItems.forEach(item => {
+                    const circle = item.querySelector('.timeline-circle');
+                    if (!circle) return;
+                    
+                    const circleRect = circle.getBoundingClientRect();
+                    const circleCenter = circleRect.left + circleRect.width / 2;
+                    const distance = Math.abs(circleCenter - viewportCenter);
+                    
+                    // If close to center (within 130px), highlight it
+                    if (distance < 130) {
+                        circle.classList.add('bg-bronze-accent', 'text-primary', 'scale-115', 'shadow-[0_0_25px_rgba(197,160,128,0.6)]');
+                        circle.classList.remove('bg-primary', 'text-snow-white');
+                    } else {
+                        circle.classList.remove('bg-bronze-accent', 'text-primary', 'scale-115', 'shadow-[0_0_25px_rgba(197,160,128,0.6)]');
+                        circle.classList.add('bg-primary', 'text-snow-white');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', handleTimelineScroll);
+            handleTimelineScroll(); // Run initially to position/highlight correctly on load
 
             // Estructura Operativa Animation
             const estOperativaSection = document.querySelector('#estructura-operativa');
