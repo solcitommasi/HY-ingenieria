@@ -3,7 +3,7 @@
 <html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HY Ingeniería S.A.U. | Ingeniería Coreana, Presencia Local</title>
+<title>HY Ingeniería S.A. | Ingeniería Coreana, Presencia Local</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -273,17 +273,23 @@
 <img src="logo.png?v=2" alt="HY Ingeniería Logo" class="h-10 w-auto object-contain" />
 <div class="flex flex-col justify-center leading-none">
   <span class="font-display-lg text-2xl font-bold text-snow-white tracking-wide">HY</span>
-  <span class="text-[9px] sm:text-[10px] tracking-[0.22em] font-semibold text-bronze-accent uppercase mt-0.5">Ingeniería S.A.U.</span>
+  <span class="text-[9px] sm:text-[10px] tracking-[0.22em] font-semibold text-bronze-accent uppercase mt-0.5">Ingeniería S.A.</span>
 </div>
 </a>
 </div>
 <nav class="hidden md:flex flex-none justify-center gap-gutter font-subhead-tech text-subhead-tech uppercase">
-<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#servicios">Servicios</a>
-<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#proyectos">Proyectos</a>
-<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#ubicacion">Ubicación</a>
+<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+<a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
 </nav>
 <div class="flex-1 flex justify-end items-center gap-4">
-<a class="hidden md:inline-block btn-liquid-glass-primary px-6 py-2 font-subhead-tech uppercase font-bold" href="#contacto">
+<div class="flex items-center gap-2 mr-2 font-subhead-tech text-[13px] text-snow-white uppercase tracking-wider">
+  <span class="material-symbols-outlined text-lg text-snow-white/60 select-none mr-0.5">language</span>
+  <button id="lang-es-btn" class="focus:outline-none transition-all duration-300 opacity-100 underline decoration-bronze-accent decoration-2 underline-offset-4" title="Español">ESP</button>
+  <span class="text-white/20 select-none">|</span>
+  <button id="lang-en-btn" class="focus:outline-none transition-all duration-300 opacity-50 hover:opacity-100" title="English">EN</button>
+</div>
+<a class="hidden md:inline-block btn-liquid-glass-primary px-6 py-2 font-subhead-tech uppercase font-bold" href="#contacto" data-es="Contacto" data-en="Contact">
             Contacto
         </a>
 <button id="mobile-menu-btn" class="md:hidden text-snow-white hover:text-bronze-accent transition-colors focus:outline-none flex items-center" aria-label="Abrir menú">
@@ -297,10 +303,10 @@
   <button id="mobile-menu-close" class="absolute top-6 right-6 text-snow-white hover:text-bronze-accent transition-colors focus:outline-none" aria-label="Cerrar menú">
     <span class="material-symbols-outlined text-3xl">close</span>
   </button>
-  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#estructura-operativa">Estructura Operativa</a>
-  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#servicios">Servicios</a>
-  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#ubicacion">Ubicación</a>
-  <a class="btn-liquid-glass-primary px-5 py-2.5 text-xs font-subhead-tech uppercase font-bold text-center mt-auto mb-8 mobile-link" href="#contacto">Contacto</a>
+  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#estructura-operativa" data-es="Estructura Operativa" data-en="Operational Structure">Estructura Operativa</a>
+  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
+  <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+  <a class="btn-liquid-glass-primary px-5 py-2.5 text-xs font-subhead-tech uppercase font-bold text-center mt-auto mb-8 mobile-link" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
 </div>
 <!-- Mobile Backdrop -->
 <div id="mobile-menu-backdrop" class="fixed inset-0 z-40 bg-black/70 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
@@ -314,18 +320,18 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
   <!-- Left Column: Value Proposition -->
   <div class="lg:col-span-7 flex flex-col justify-center">
-    <h1 class="font-display-lg text-display-lg-mobile md:text-[54px] text-snow-white mb-5 leading-tight">
+    <h1 class="font-display-lg text-display-lg-mobile md:text-[44px] text-snow-white mb-5 leading-tight" data-es="Ingeniería Coreana.<br/><span class='text-bronze-accent'>Presencia Local Permanente.</span>" data-en="Korean Engineering.<br/><span class='text-bronze-accent'>Permanent Local Presence.</span>">
                     Ingeniería Coreana.<br/>
     <span class="text-bronze-accent">Presencia Local Permanente.</span>
     </h1>
-    <p class="font-body-lg text-body-lg text-snow-white mb-8 max-w-xl">
+    <p class="font-body-lg text-body-lg text-snow-white mb-8 max-w-xl" data-es="Soluciones integrales para la minería del NOA: tanques FRP y STS diseñados en Corea, fabricados y servidos en Campo Quijano, Salta." data-en="Comprehensive solutions for NOA mining: FRP and STS tanks designed in Korea, manufactured and serviced in Campo Quijano, Salta.">
                     Soluciones integrales para la minería del NOA: tanques FRP y STS diseñados en Corea, fabricados y servidos en Campo Quijano, Salta.
                 </p>
     <div class="flex flex-col sm:flex-row gap-4">
-      <a class="btn-liquid-glass-primary px-8 py-4 font-subhead-tech uppercase tracking-wider font-bold text-center" href="#contacto">
+      <a class="btn-liquid-glass-primary px-8 py-4 font-subhead-tech uppercase tracking-wider font-bold text-center" href="#contacto" data-es="Contactar a un Asesor" data-en="Contact an Advisor">
                           Contactar a un Asesor
                       </a>
-      <a class="btn-liquid-glass-secondary px-8 py-4 font-subhead-tech uppercase tracking-wider text-center" href="#servicios">
+      <a class="btn-liquid-glass-secondary px-8 py-4 font-subhead-tech uppercase tracking-wider text-center" href="#servicios" data-es="Ver Capacidades" data-en="View Capabilities">
                           Ver Capacidades
                       </a>
     </div>
@@ -339,42 +345,42 @@
       <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-bronze-accent/20 via-bronze-accent to-bronze-accent/20"></div>
       
       <div class="mb-6">
-        <span class="text-[10px] uppercase font-subhead-tech tracking-[0.25em] text-bronze-accent">Especificaciones Técnicas</span>
+        <span class="text-[10px] uppercase font-subhead-tech tracking-[0.25em] text-bronze-accent" data-es="Especificaciones Técnicas" data-en="Technical Specifications">Especificaciones Técnicas</span>
       </div>
       
-      <h3 class="text-snow-white font-headline-md text-xl mb-6">Infraestructura y Respaldo</h3>
+      <h3 class="text-snow-white font-headline-md text-xl mb-6" data-es="Infraestructura y Respaldo" data-en="Infrastructure &amp; Support">Infraestructura y Respaldo</h3>
       
       <div class="space-y-5">
         <!-- Item 1 -->
         <div class="flex items-start gap-4 pb-4 border-b border-white/10">
           <span class="material-symbols-outlined text-bronze-accent mt-0.5">factory</span>
           <div>
-            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider">Capacidad de Manufactura</h4>
-            <p class="text-surface-dim text-sm mt-0.5">Planta de 5.000 m² en Campo Quijano, Salta</p>
+            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider" data-es="Capacidad de Manufactura" data-en="Manufacturing Capacity">Capacidad de Manufactura</h4>
+            <p class="text-surface-dim text-sm mt-0.5" data-es="Planta de 5.000 m² en Campo Quijano, Salta" data-en="5,000 m² plant in Campo Quijano, Salta">Planta de 5.000 m² en Campo Quijano, Salta</p>
           </div>
         </div>
         <!-- Item 2 -->
         <div class="flex items-start gap-4 pb-4 border-b border-white/10">
           <span class="material-symbols-outlined text-bronze-accent mt-0.5">engineering</span>
           <div>
-            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider">Respaldo & Diseño</h4>
-            <p class="text-surface-dim text-sm mt-0.5">Ingeniería de detalle en Casa Matriz, Corea del Sur</p>
+            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider" data-es="Respaldo &amp; Diseño" data-en="Design &amp; Support">Respaldo &amp; Diseño</h4>
+            <p class="text-surface-dim text-sm mt-0.5" data-es="Ingeniería de detalle en Casa Matriz, Corea del Sur" data-en="Detail engineering at Headquarters, South Korea">Ingeniería de detalle en Casa Matriz, Corea del Sur</p>
           </div>
         </div>
         <!-- Item 3 -->
         <div class="flex items-start gap-4 pb-4 border-b border-white/10">
           <span class="material-symbols-outlined text-bronze-accent mt-0.5">workspace_premium</span>
           <div>
-            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider">Estándares Globales</h4>
-            <p class="text-surface-dim text-sm mt-0.5">Certificaciones KS, ISO 14001, ASME y Marcado CE</p>
+            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider" data-es="Estándares Globales" data-en="Global Standards">Estándares Globales</h4>
+            <p class="text-surface-dim text-sm mt-0.5" data-es="Certificaciones KS, ISO 14001, ASME y Marcado CE" data-en="KS, ISO 14001, ASME &amp; CE Marking Certifications">Certificaciones KS, ISO 14001, ASME y Marcado CE</p>
           </div>
         </div>
         <!-- Item 4 -->
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-bronze-accent mt-0.5">local_shipping</span>
           <div>
-            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider">Logística Regional</h4>
-            <p class="text-surface-dim text-sm mt-0.5">Distribución y servicio técnico &lt; 500 km en NOA</p>
+            <h4 class="text-snow-white text-xs font-semibold uppercase tracking-wider" data-es="Logística Regional" data-en="Regional Logistics">Logística Regional</h4>
+            <p class="text-surface-dim text-sm mt-0.5" data-es="Distribución y servicio técnico &lt; 500 km en NOA" data-en="Distribution and technical service &lt; 500 km in NOA">Distribución y servicio técnico &lt; 500 km en NOA</p>
           </div>
         </div>
       </div>
@@ -389,18 +395,18 @@
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-7xl">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div class="fade-in-left opacity-0 -translate-x-8 transition-all duration-[1200ms] ease-out">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Estructura Operativa</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Estructura Operativa" data-en="Operational Structure">Estructura Operativa</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight" data-es="Tecnología de Corea,<br class='hidden md:inline'/>Fabricación en Salta" data-en="Korean Technology,<br class='hidden md:inline'/>Manufacturing in Salta">
                         Tecnología de Corea,<br class="hidden md:inline"/>Fabricación en Salta
                     </h2>
 <div class="space-y-6 text-[13px] md:text-body-lg text-charcoal-text">
 <div class="flex gap-4 items-start">
 <span class="material-symbols-outlined text-bronze-accent mt-1">settings_suggest</span>
-<p><strong class="text-primary">Casa Matriz (Corea):</strong> Responsable del diseño de ingeniería avanzada, desarrollo de bombas químicas especiales y componentes críticos de alta tecnología.</p>
+<p data-es="<strong class='text-primary'>Casa Matriz (Corea):</strong> Responsable del diseño de ingeniería avanzada, desarrollo de bombas químicas especiales y componentes críticos de alta tecnología." data-en="<strong class='text-primary'>Headquarters (Korea):</strong> Responsible for advanced engineering design, development of special chemical pumps, and high-tech critical components."><strong class="text-primary">Casa Matriz (Corea):</strong> Responsable del diseño de ingeniería avanzada, desarrollo de bombas químicas especiales y componentes críticos de alta tecnología.</p>
 </div>
 <div class="flex gap-4 items-start">
 <span class="material-symbols-outlined text-bronze-accent mt-1">factory</span>
-<p><strong class="text-primary">Filial Salta (Argentina):</strong> Planta de 5.000 m² dedicada a la fabricación local de tanques, montaje industrial y servicios de mantenimiento con equipo residente.</p>
+<p data-es="<strong class='text-primary'>Filial Salta (Argentina):</strong> Planta de 5.000 m² dedicada a la fabricación local de tanques, montaje industrial y servicios de mantenimiento con equipo residente." data-en="<strong class='text-primary'>Salta Branch (Argentina):</strong> 5,000 m² plant dedicated to local tank fabrication, industrial assembly, and maintenance services with resident team."><strong class="text-primary">Filial Salta (Argentina):</strong> Planta de 5.000 m² dedicada a la fabricación local de tanques, montaje industrial y servicios de mantenimiento con equipo residente.</p>
 </div>
 </div>
 </div>
@@ -408,35 +414,31 @@
 <div class="absolute -top-10 -right-10 w-64 h-64 border border-bronze-accent/20 rounded-full"></div>
 <div class="bg-primary/85 backdrop-blur-md border border-white/10 p-12 shadow-2xl relative overflow-hidden group">
 <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #C5A080 1px, transparent 1px); background-size: 20px 20px;"></div>
-<h3 class="text-bronze-accent font-headline-md mb-6">Ventaja de Un Solo Contrato</h3>
-<p class="text-surface-dim mb-8">Evite la complejidad de la importación y barreras de comunicación. Tratamos de forma directa con su equipo en el terreno.</p>
+<h3 class="text-bronze-accent font-headline-md mb-6" data-es="Ventaja de Un Solo Contrato" data-en="Single Contract Advantage">Ventaja de Un Solo Contrato</h3>
+<p class="text-surface-dim mb-8" data-es="Evite la complejidad de la importación y barreras de comunicación. Tratamos de forma directa con su equipo en el terreno." data-en="Avoid import complexity and communication barriers. We deal directly with your team on the ground.">Evite la complejidad de la importación y barreras de comunicación. Tratamos de forma directa con su equipo en el terreno.</p>
 <ul class="space-y-4 text-snow-white font-subhead-tech text-[13px] uppercase tracking-wider">
-<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> Facturación en Argentina</li>
-<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> Soporte Técnico 24/7 en Sitio</li>
-<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> Inspecciones FAT Locales</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> <span data-es="Facturación en Argentina" data-en="Billing in Argentina">Facturación en Argentina</span></li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> <span data-es="Soporte Técnico 24/7 en Sitio" data-en="24/7 On-Site Technical Support">Soporte Técnico 24/7 en Sitio</span></li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-bronze-accent"></span> <span data-es="Inspecciones FAT Locales" data-en="Local FAT Inspections">Inspecciones FAT Locales</span></li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-</section>
-
 <!-- Respaldo en Números (Estadísticas) -->
-<section class="py-20 bg-surface-container-low border-b border-surface-variant/30">
-  <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
-    <div id="stats-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 w-full relative z-20">
+<div class="mt-20 border-t border-surface-variant/30 pt-16 w-full">
+  <div id="stats-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 w-full relative z-20">
       <!-- Card 1 -->
       <div class="bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex flex-col justify-between h-full stats-card-entrance">
         <div class="flex flex-row md:flex-col items-center md:items-start gap-3 md:gap-0">
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="45" data-suffix="+">0+</div>
           <div class="line-accent mb-3 hidden md:block"></div>
           <div>
-            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight">Años de ingeniería y respaldo técnico</p>
-            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden">(Han Young Co., Ltd. en Corea)</p>
+            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight" data-es="Años de ingeniería y respaldo técnico" data-en="Years of engineering and technical backup">Años de ingeniería y respaldo técnico</p>
+            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden" data-es="(Han Young Co., Ltd. en Corea)" data-en="(Han Young Co., Ltd. in Korea)">(Han Young Co., Ltd. en Corea)</p>
           </div>
         </div>
         <div class="md:hidden mt-1">
-          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1">(Han Young Co., Ltd. en Corea)</p>
+          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1" data-es="(Han Young Co., Ltd. en Corea)" data-en="(Han Young Co., Ltd. in Korea)">(Han Young Co., Ltd. en Corea)</p>
         </div>
       </div>
       <!-- Card 2 -->
@@ -445,12 +447,12 @@
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="10" data-suffix="+">0+</div>
           <div class="line-accent mb-3 hidden md:block"></div>
           <div>
-            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight">Años operando en Argentina</p>
-            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden">(Campo Quijano, Salta)</p>
+            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight" data-es="Años operando en Argentina" data-en="Years operating in Argentina">Años operando en Argentina</p>
+            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden" data-es="(Campo Quijano, Salta)" data-en="(Campo Quijano, Salta)">(Campo Quijano, Salta)</p>
           </div>
         </div>
         <div class="md:hidden mt-1">
-          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1">(Campo Quijano, Salta)</p>
+          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1" data-es="(Campo Quijano, Salta)" data-en="(Campo Quijano, Salta)">(Campo Quijano, Salta)</p>
         </div>
       </div>
       <!-- Card 3 -->
@@ -459,12 +461,12 @@
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="244" data-suffix="+">0+</div>
           <div class="line-accent mb-3 hidden md:block"></div>
           <div>
-            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight">Tanques FRP entregados en NOA</p>
-            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden">(Proyectos mineros locales)</p>
+            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight" data-es="Tanques FRP entregados en NOA" data-en="FRP tanks delivered in NOA">Tanques FRP entregados en NOA</p>
+            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden" data-es="(Proyectos mineros locales)" data-en="(Local mining projects)">(Proyectos mineros locales)</p>
           </div>
         </div>
         <div class="md:hidden mt-1">
-          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1">(Proyectos mineros locales)</p>
+          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1" data-es="(Proyectos mineros locales)" data-en="(Local mining projects)">(Proyectos mineros locales)</p>
         </div>
       </div>
       <!-- Card 4 -->
@@ -473,66 +475,67 @@
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="4" data-prefix="2-" data-suffix="">0</div>
           <div class="line-accent mb-3 hidden md:block"></div>
           <div>
-            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight">Semanas lead time promedio</p>
-            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden">(Respuesta inmediata local)</p>
+            <p class="font-subhead-tech text-subhead-tech text-slate-navy uppercase text-[10px] md:text-sm leading-tight" data-es="Semanas lead time promedio" data-en="Average weeks lead time">Semanas lead time promedio</p>
+            <p class="text-[10px] text-outline mt-1 italic border-t border-surface-variant/40 pt-1 md:block hidden" data-es="(Respuesta inmediata local)" data-en="(Immediate local response)">(Respuesta inmediata local)</p>
           </div>
         </div>
         <div class="md:hidden mt-1">
-          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1">(Respuesta inmediata local)</p>
+          <p class="text-[9px] text-outline italic border-t border-surface-variant/20 pt-1" data-es="(Respuesta inmediata local)" data-en="(Immediate local response)">(Respuesta inmediata local)</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- Línea de Suministro (Grid) -->
-<section class="pt-20 pb-28 bg-background" id="servicios">
+<section class="py-section-gap bg-background" id="servicios">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
 <div class="max-w-3xl">
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-3 block">Capacidades Industriales</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-0 leading-tight">Línea de Suministro Especializada</h2>
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-3 block" data-es="Capacidades Industriales" data-en="Industrial Capabilities">Capacidades Industriales</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-0 leading-tight" data-es="Línea de Suministro Especializada" data-en="Specialized Supply Line">Línea de Suministro Especializada</h2>
 </div>
 </div>
 <div class="flex flex-col lg:flex-row gap-2.5 lg:gap-3 w-full min-h-[255px] items-stretch lg:justify-between">
-<div class="card-supply bg-white p-3 md:p-4 lg:px-4 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
-<div class="w-full lg:w-[130px] lg:shrink-0 flex flex-col justify-between h-full py-1">
+<div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
 <div class="flex items-center lg:block gap-3 mb-1.5">
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">rebase_edit</span>
-<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug">Tanques y Reactores FRP</h4>
+<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tanques y Reactores FRP" data-en="FRP Tanks &amp; Reactors">Tanques y Reactores FRP</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed">Reforzados con fibra de vidrio para máxima resistencia química en minería.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Reforzados con fibra de vidrio para máxima resistencia química en minería." data-en="Fiberglass reinforced for maximum chemical resistance in mining.">Reforzados con fibra de vidrio para máxima resistencia química en minería.</p>
 </div>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block">Fabricación Local</span>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Fabricación Local" data-en="Local Fabrication">Fabricación Local</span>
 </div>
 <!-- Extra Info grid hidden by default -->
-<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[145px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
-<div class="w-[130px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
+<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[125px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
+<div class="w-[110px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetro Máx</span>
-<span class="font-bold text-primary">Ø 5.0 m (terrestre)</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Diámetro Máx" data-en="Max Diameter">Diámetro Máx</span>
+<span class="font-bold text-primary" data-es="Ø 5.0 m (terrestre)" data-en="Ø 5.0 m (land)">Ø 5.0 m (terrestre)</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Volumen / Unit</span>
-<span class="font-bold text-primary">1 a 200 m³</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Volumen / Unit" data-en="Volume / Unit">Volumen / Unit</span>
+<span class="font-bold text-primary" data-es="1 a 200 m³" data-en="1 to 200 m³">1 a 200 m³</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Capacidad Anual</span>
-<span class="font-bold text-primary">~18.000 m³</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Capacidad Anual" data-en="Annual Capacity">Capacidad Anual</span>
+<span class="font-bold text-primary" data-es="~18.000 m³" data-en="~18,000 m³">~18.000 m³</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Resinas</span>
-<span class="font-bold text-primary">Vinylester, Epoxy</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Resinas" data-en="Resins">Resinas</span>
+<span class="font-bold text-primary" data-es="Vinylester, Epoxy" data-en="Vinylester, Epoxy">Vinylester, Epoxy</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Longitud Máx</span>
-<span class="font-bold text-primary">11.0 m</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Longitud Máx" data-en="Max Length">Longitud Máx</span>
+<span class="font-bold text-primary" data-es="11.0 m" data-en="11.0 m">11.0 m</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Normativas</span>
-<span class="font-bold text-primary">ASTM D2996, ANSI</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Normativas" data-en="Regulations">Normativas</span>
+<span class="font-bold text-primary" data-es="ASTM D2996, ANSI" data-en="ASTM D2996, ANSI">ASTM D2996, ANSI</span>
 </div>
 </div>
 </div>
@@ -540,44 +543,44 @@
 <span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 2 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-4 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
-<div class="w-full lg:w-[130px] lg:shrink-0 flex flex-col justify-between h-full py-1">
+<div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
 <div class="flex items-center lg:block gap-3 mb-1.5">
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">propane_tank</span>
-<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug">Tanques de Acero Inox (STS)</h4>
+<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tanques de Acero Inox (STS)" data-en="Stainless Steel Tanks (STS)">Tanques de Acero Inox (STS)</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed">Acabados de alta precisión para dimensiones que superan los límites del FRP.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Acabados de alta precisión para dimensiones que superan los límites del FRP." data-en="High-precision finishes for dimensions exceeding FRP limits.">Acabados de alta precisión para dimensiones que superan los límites del FRP.</p>
 </div>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block">Normas Coreanas</span>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Normas Coreanas" data-en="Korean Standards">Normas Coreanas</span>
 </div>
 <!-- Extra Info grid hidden by default -->
-<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[145px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
-<div class="w-[130px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
+<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[125px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
+<div class="w-[110px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetro Máx</span>
-<span class="font-bold text-primary">Sin Límite</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Diámetro Máx" data-en="Max Diameter">Diámetro Máx</span>
+<span class="font-bold text-primary" data-es="Sin Límite" data-en="No Limit">Sin Límite</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Materiales</span>
-<span class="font-bold text-primary">SS 316L, 304</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Materiales" data-en="Materials">Materiales</span>
+<span class="font-bold text-primary" data-es="SS 316L, 304" data-en="SS 316L, 304">SS 316L, 304</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Construcción</span>
-<span class="font-bold text-primary">Modular 4 sec.</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Construcción" data-en="Construction">Construcción</span>
+<span class="font-bold text-primary" data-es="Modular 4 sec." data-en="Modular 4 sec.">Modular 4 sec.</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Aislamiento</span>
-<span class="font-bold text-primary">Lana Min./Cerám.</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Aislamiento" data-en="Insulation">Aislamiento</span>
+<span class="font-bold text-primary" data-es="Lana Min./Cerám." data-en="Min./Ceramic Wool">Lana Min./Cerám.</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Soldadura</span>
-<span class="font-bold text-primary">TIG, MIG Certif.</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Soldadura" data-en="Welding">Soldadura</span>
+<span class="font-bold text-primary" data-es="TIG, MIG Certif." data-en="Certified TIG, MIG">TIG, MIG Certif.</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Código Diseño</span>
-<span class="font-bold text-primary">ASME VIII, API</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Código Diseño" data-en="Design Code">Código Diseño</span>
+<span class="font-bold text-primary" data-es="ASME VIII, API" data-en="ASME VIII, API">ASME VIII, API</span>
 </div>
 </div>
 </div>
@@ -585,44 +588,44 @@
 <span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 3 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-4 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
-<div class="w-full lg:w-[130px] lg:shrink-0 flex flex-col justify-between h-full py-1">
+<div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
 <div class="flex items-center lg:block gap-3 mb-1.5">
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">schema</span>
-<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug">Tuberías y Piping FRP</h4>
+<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tuberías y Piping FRP" data-en="FRP Piping &amp; Systems">Tuberías y Piping FRP</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed">Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación." data-en="Transportation systems for highly corrosive fluids and ventilation ducts.">Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación.</p>
 </div>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block">Resistencia Extrema</span>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Resistencia Extrema" data-en="Extreme Resistance">Resistencia Extrema</span>
 </div>
 <!-- Extra Info grid hidden by default -->
-<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[145px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
-<div class="w-[130px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
+<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[125px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
+<div class="w-[110px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Diámetros</span>
-<span class="font-bold text-primary">1" a 48"</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Diámetros" data-en="Diameters">Diámetros</span>
+<span class="font-bold text-primary" data-es="1&quot; a 48&quot;" data-en="1&quot; to 48&quot;">1" a 48"</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Resistencia</span>
-<span class="font-bold text-primary">Salmueras Li, NaOH</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Resistencia" data-en="Resistance">Resistencia</span>
+<span class="font-bold text-primary" data-es="Salmueras Li, NaOH" data-en="Li Brines, NaOH">Salmueras Li, NaOH</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Procesos</span>
-<span class="font-bold text-primary">FW / Hand Lay</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Procesos" data-en="Processes">Procesos</span>
+<span class="font-bold text-primary" data-es="FW / Hand Lay" data-en="FW / Hand Lay">Procesos</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Productos</span>
-<span class="font-bold text-primary">Tuberías, codos</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Productos" data-en="Products">Productos</span>
+<span class="font-bold text-primary" data-es="Tuberías, codos" data-en="Pipes, elbows">Tuberías, codos</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Aplicaciones</span>
-<span class="font-bold text-primary">Líneas y ductos</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Aplicaciones" data-en="Applications">Aplicaciones</span>
+<span class="font-bold text-primary" data-es="Líneas y ductos" data-en="Lines &amp; ducts">Líneas y ductos</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Normativas</span>
-<span class="font-bold text-primary">ASTM D2996, ANSI</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Normativas" data-en="Regulations">Normativas</span>
+<span class="font-bold text-primary" data-es="ASTM D2996, ANSI" data-en="ASTM D2996, ANSI">ASTM D2996, ANSI</span>
 </div>
 </div>
 </div>
@@ -630,44 +633,44 @@
 <span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 4 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-4 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
-<div class="w-full lg:w-[130px] lg:shrink-0 flex flex-col justify-between h-full py-1">
+<div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
 <div class="flex items-center lg:block gap-3 mb-1.5">
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">heat_pump</span>
-<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug">Bombas Especiales</h4>
+<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Bombas Especiales" data-en="Special Pumps">Bombas Especiales</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed">Equipamiento industrial de alta gama importado de la casa matriz en Corea.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Equipamiento industrial de alta gama importado de la casa matriz en Corea." data-en="High-end industrial equipment imported from headquarters in Korea.">Equipamiento industrial de alta gama importado de la casa matriz en Corea.</p>
 </div>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block">Exclusividad HY</span>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Exclusividad HY" data-en="HY Exclusivity">Exclusividad HY</span>
 </div>
 <!-- Extra Info grid hidden by default -->
-<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[145px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
-<div class="w-[130px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
+<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[125px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
+<div class="w-[110px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Origen</span>
-<span class="font-bold text-primary">Han Young (KR)</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Origen" data-en="Origin">Origen</span>
+<span class="font-bold text-primary" data-es="Han Young (KR)" data-en="Han Young (KR)">Han Young (KR)</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Materiales</span>
-<span class="font-bold text-primary">SS316, PVDF, PP</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Materiales" data-en="Materials">Materiales</span>
+<span class="font-bold text-primary" data-es="SS316, PVDF, PP" data-en="SS316, PVDF, PP">SS316, PVDF, PP</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Tipos</span>
-<span class="font-bold text-primary">Centrífuga, Magn.</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Tipos" data-en="Types">Tipos</span>
+<span class="font-bold text-primary" data-es="Centrífuga, Magn." data-en="Centrifugal, Magnetic">Centrífuga, Magn.</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Entregadas</span>
-<span class="font-bold text-primary">211 bombas NOA</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Entregadas" data-en="Delivered">Entregadas</span>
+<span class="font-bold text-primary" data-es="211 bombas NOA" data-en="211 NOA pumps">211 bombas NOA</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Certificaciones</span>
-<span class="font-bold text-primary">ISO 14001, CE</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Certificaciones" data-en="Certifications">Certificaciones</span>
+<span class="font-bold text-primary" data-es="ISO 14001, CE" data-en="ISO 14001, CE">ISO 14001, CE</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Servicios</span>
-<span class="font-bold text-primary">Importación, SV</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Servicios" data-en="Services">Servicios</span>
+<span class="font-bold text-primary" data-es="Importación, SV" data-en="Import, SV">Importación, SV</span>
 </div>
 </div>
 </div>
@@ -675,44 +678,44 @@
 <span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 5 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-4 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
-<div class="w-full lg:w-[130px] lg:shrink-0 flex flex-col justify-between h-full py-1">
+<div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
 <div class="flex items-center lg:block gap-3 mb-1.5">
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">engineering</span>
-<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug">Instalación y Servicio</h4>
+<h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Instalación y Servicio" data-en="Installation &amp; Service">Instalación y Servicio</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed">Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo." data-en="Resident technical team in Campo Quijano for preventive and corrective support.">Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo.</p>
 </div>
-<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block">Soporte Local</span>
+<span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Soporte Local" data-en="Local Support">Soporte Local</span>
 </div>
 <!-- Extra Info grid hidden by default -->
-<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[145px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
-<div class="w-[130px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
+<div class="extra-info w-full lg:flex-grow max-h-0 opacity-0 lg:group-hover:max-h-none lg:max-h-none lg:max-w-0 lg:group-hover:max-w-[125px] lg:group-hover:opacity-100 transition-all duration-700 ease-in-out overflow-hidden lg:border-surface-variant/30 lg:border-l-0 lg:group-hover:border-l pt-3 lg:pt-0 lg:ml-0 lg:group-hover:ml-4 lg:pl-0 lg:group-hover:pl-4 lg:pr-0 flex flex-col justify-center">
+<div class="w-[110px] shrink-0 space-y-1.5 text-[12px] leading-snug tracking-normal text-slate-navy">
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Respuesta</span>
-<span class="font-bold text-primary">24 a 72 hs in situ</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Respuesta" data-en="Response">Respuesta</span>
+<span class="font-bold text-primary" data-es="24 a 72 hs in situ" data-en="24 to 72 hrs in situ">24 a 72 hs in situ</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Radio Servicio</span>
-<span class="font-bold text-primary">≤ 500 km</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Radio Servicio" data-en="Service Radius">Radio Servicio</span>
+<span class="font-bold text-primary" data-es="≤ 500 km" data-en="≤ 500 km">≤ 500 km</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Servicios</span>
-<span class="font-bold text-primary">Montaje, piping</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Servicios" data-en="Services">Servicios</span>
+<span class="font-bold text-primary" data-es="Montaje, piping" data-en="Assembly, piping">Montaje, piping</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Comisionamiento</span>
-<span class="font-bold text-primary">Start-up sup. KR</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Comisionamiento" data-en="Commissioning">Comisionamiento</span>
+<span class="font-bold text-primary" data-es="Start-up sup. KR" data-en="Start-up sup. KR">Start-up sup. KR</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Movilidad</span>
-<span class="font-bold text-primary">Taller rodante</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Movilidad" data-en="Mobility">Movilidad</span>
+<span class="font-bold text-primary" data-es="Taller rodante" data-en="Rolling workshop">Taller rodante</span>
 </div>
 <div>
-<span class="text-outline uppercase text-[9px] tracking-wider block">Guardia</span>
-<span class="font-bold text-primary">24/7 en campo</span>
+<span class="text-outline uppercase text-[9px] tracking-wider block" data-es="Guardia" data-en="Guard duty">Guardia</span>
+<span class="font-bold text-primary" data-es="24/7 en campo" data-en="24/7 in field">24/7 en campo</span>
 </div>
 </div>
 </div>
@@ -724,11 +727,11 @@
 </section>
 
 <!-- Trayectoria y Proyectos Hitos -->
-<section class="relative lg:h-[180vh] bg-white" id="proyectos">
+<section class="relative lg:h-[150vh] bg-white" id="proyectos">
   <div class="hidden lg:flex sticky top-[calc(50vh-270px)] h-[540px] flex-col justify-center overflow-hidden border-b border-surface-variant/30">
     <div class="container mx-auto px-margin-desktop mb-4">
-      <span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-2 block">Hitos Clave</span>
-      <h2 class="font-display-lg text-[44px] text-primary mb-4 leading-tight">Trayectoria de Proyectos en Argentina</h2>
+      <span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Hitos Clave" data-en="Key Milestones">Hitos Clave</span>
+      <h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight" data-es="Trayectoria de Proyectos en Argentina" data-en="Project History in Argentina">Trayectoria de Proyectos en Argentina</h2>
     </div>
     
     <!-- Horizontal timeline viewport -->
@@ -743,8 +746,8 @@
         <!-- Hito 1: 1980 (Odd - Content above circle) -->
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug">Fundación de Casa Matriz</h3>
-            <p class="text-body-md text-outline leading-relaxed">Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Fundación de Casa Matriz" data-en="Headquarters Foundation">Fundación de Casa Matriz</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur." data-en="Establishment of Han Young Co., Ltd. in Gyeongju, South Korea.">Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur.</p>
           </div>
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[120px] transition-all duration-300">1980</div>
         </div>
@@ -753,16 +756,16 @@
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2005-14</div>
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug">Certificaciones Globales</h3>
-            <p class="text-body-md text-outline leading-relaxed">Obtención de las certificaciones clave ISO 14001, KS y marca CE (Unión Europea).</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Certificaciones Globales" data-en="Global Certifications">Certificaciones Globales</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Obtención de las certificaciones clave ISO 14001, KS y marca CE (Unión Europea)." data-en="Obtaining key ISO 14001, KS certifications, and CE marking (European Union).">Obtención de las certificaciones clave ISO 14001, KS y marca CE (Unión Europea).</p>
           </div>
         </div>
         
         <!-- Hito 3: 2011-12 (Odd - Content above circle) -->
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug">Planta Piloto Cauchari</h3>
-            <p class="text-body-md text-outline leading-relaxed">Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Planta Piloto Cauchari" data-en="Cauchari Pilot Plant">Planta Piloto Cauchari</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio." data-en="First supply of 26 tanks, pumps, and piping for lithium pilot testing.">Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio.</p>
           </div>
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold shadow-lg absolute bottom-[120px] transition-all duration-300">2011-12</div>
         </div>
@@ -771,16 +774,16 @@
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2016</div>
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug">Filial Argentina</h3>
-            <p class="text-body-md text-outline leading-relaxed">Establecimiento de la filial y primera planta de fabricación local de tanques FRP coreanos.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="Filial Argentina" data-en="Argentina Branch">Filial Argentina</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Establecimiento de la filial y primera planta de fabricación local de tanques FRP coreanos." data-en="Establishment of the subsidiary and first local manufacturing plant for Korean FRP tanks.">Establecimiento de la filial y primera planta de fabricación local de tanques FRP coreanos.</p>
           </div>
         </div>
         
         <!-- Hito 5: 2020 (Odd - Content above circle) -->
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug">Planta Demo NOA</h3>
-            <p class="text-body-md text-outline leading-relaxed">Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Planta Demo NOA" data-en="NOA Demo Plant">Planta Demo NOA</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral." data-en="Construction and installation of 28 tanks, 86 chemical pumps, and comprehensive commissioning.">Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral.</p>
           </div>
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[120px] transition-all duration-300">2020</div>
         </div>
@@ -789,16 +792,16 @@
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2022</div>
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug">Proyecto NOA - Fase 1</h3>
-            <p class="text-body-md text-outline leading-relaxed">Fabricación e instalación exitosa de 109 tanques FRP (11.035 m³ de capacidad acumulada para litio).</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="Proyecto NOA - Fase 1" data-en="NOA Project - Phase 1">Proyecto NOA - Fase 1</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Fabricación e instalación exitosa de 109 tanques FRP (11.035 m³ de capacidad acumulada para litio)." data-en="Successful fabrication and installation of 109 FRP tanks (11,035 m³ cumulative capacity for lithium).">Fabricación e instalación exitosa de 109 tanques FRP (11.035 m³ de capacidad acumulada para litio).</p>
           </div>
         </div>
         
         <!-- Hito 7: 2024 (Odd - Content above circle) -->
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug">Proyecto NOA - Fase 2</h3>
-            <p class="text-body-md text-outline leading-relaxed">Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Proyecto NOA - Fase 2" data-en="NOA Project - Phase 2">Proyecto NOA - Fase 2</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas." data-en="Large-scale supply of 81 FRP tanks, 14 STS tanks, and 125 chemical pumps.">Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas.</p>
           </div>
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute bottom-[120px] transition-all duration-300">2024</div>
         </div>
@@ -807,8 +810,8 @@
         <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2026+</div>
           <div class="text-center px-4 max-w-[260px]">
-            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug">EPC & Expansión</h3>
-            <p class="text-body-md text-outline leading-relaxed">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
+            <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="EPC &amp; Expansión" data-en="EPC &amp; Expansion">EPC &amp; Expansión</h3>
+            <p class="text-body-md text-outline leading-relaxed" data-es="Integración completa de montaje mecánico en obra y contratos de mantenimiento residente." data-en="Full integration of mechanical assembly on site and resident maintenance contracts.">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
           </div>
         </div>
       </div>
@@ -876,49 +879,46 @@
       <div class="relative">
         <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary border-2 border-bronze-accent"></div>
         <span class="text-xs font-bold text-bronze-accent uppercase tracking-widest block mb-1">2026+</span>
-        <h3 class="font-headline-md text-lg text-primary mb-1">EPC & Expansión</h3>
-        <p class="text-body-md text-outline leading-relaxed">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
+        <h3 class="font-headline-md text-lg text-primary mb-1" data-es="EPC &amp; Expansión" data-en="EPC &amp; Expansion">EPC &amp; Expansión</h3>
+        <p class="text-body-md text-outline leading-relaxed" data-es="Integración completa de montaje mecánico en obra y contratos de mantenimiento residente." data-en="Full integration of mechanical assembly on site and resident maintenance contracts.">Integración completa de montaje mecánico en obra y contratos de mantenimiento residente.</p>
       </div>
     </div>
   </div>
 </section>
-</section>
-
-<!-- Ubicación Estratégica -->
 <section class="py-section-gap bg-primary text-snow-white relative overflow-hidden" id="ubicacion">
 <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-20 items-center">
 <div>
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Hub Logístico NOA</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-snow-white mb-8 leading-tight">Ubicación Estratégica</h2>
-<p class="font-body-lg text-surface-dim mb-2 md:mb-8">
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Hub Logístico NOA" data-en="NOA Logistic Hub">Hub Logístico NOA</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-snow-white mb-8 leading-tight" data-es="Ubicación Estratégica" data-en="Strategic Location">Ubicación Estratégica</h2>
+<p class="font-body-lg text-surface-dim mb-2 md:mb-8" data-es="Nuestra planta industrial en Campo Quijano, Salta, se posiciona estratégicamente en el centro del Triángulo del Litio, garantizando disponibilidad y asistencia en campo inmediata." data-en="Our industrial plant in Campo Quijano, Salta, is strategically positioned in the center of the Lithium Triangle, guaranteeing availability and immediate on-site support.">
   Nuestra planta industrial en Campo Quijano, Salta, se posiciona estratégicamente en el centro del Triángulo del Litio, garantizando disponibilidad y asistencia en campo inmediata.
 </p>
 <div class="hidden md:grid grid-cols-2 gap-4">
   <!-- Spec 1 -->
   <div class="bg-white/5 p-4 border-t border-l border-white/10 hover:border-bronze-accent/40 transition-colors duration-300 spec-card opacity-0 translate-y-4 transition-all duration-700 ease-out">
-    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1">Radio Cobertura</span>
+    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1" data-es="Radio Cobertura" data-en="Coverage Radius">Radio Cobertura</span>
     <span class="font-display-md text-xl text-snow-white font-bold">≤ 500 km</span>
-    <span class="text-[11px] text-surface-dim block mt-1">Conexión rápida a salares</span>
+    <span class="text-[11px] text-surface-dim block mt-1" data-es="Conexión rápida a salares" data-en="Quick connection to salt flats">Conexión rápida a salares</span>
   </div>
   <!-- Spec 2 -->
   <div class="bg-white/5 p-4 border-t border-l border-white/10 hover:border-bronze-accent/40 transition-colors duration-300 spec-card opacity-0 translate-y-4 transition-all duration-700 ease-out">
-    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1">Asistencia Técnica</span>
-    <span class="font-display-md text-xl text-snow-white font-bold">In Situ</span>
-    <span class="text-[11px] text-surface-dim block mt-1">Soporte directo en obra</span>
+    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1" data-es="Asistencia Técnica" data-en="Technical Assistance">Asistencia Técnica</span>
+    <span class="font-display-md text-xl text-snow-white font-bold" data-es="In Situ" data-en="On Site">In Situ</span>
+    <span class="text-[11px] text-surface-dim block mt-1" data-es="Soporte directo en obra" data-en="Direct support on site">Soporte directo en obra</span>
   </div>
   <!-- Spec 3 -->
   <div class="bg-white/5 p-4 border-t border-l border-white/10 hover:border-bronze-accent/40 transition-colors duration-300 spec-card opacity-0 translate-y-4 transition-all duration-700 ease-out">
-    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1">Infraestructura</span>
-    <span class="font-display-md text-xl text-snow-white font-bold">Taller Local</span>
-    <span class="text-[11px] text-surface-dim block mt-1">Fabricación y repuestos</span>
+    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1" data-es="Infraestructura" data-en="Infrastructure">Infraestructura</span>
+    <span class="font-display-md text-xl text-snow-white font-bold" data-es="Taller Local" data-en="Local Workshop">Taller Local</span>
+    <span class="text-[11px] text-surface-dim block mt-1" data-es="Fabricación y repuestos" data-en="Manufacturing &amp; spare parts">Fabricación y repuestos</span>
   </div>
   <!-- Spec 4 -->
   <div class="bg-white/5 p-4 border-t border-l border-white/10 hover:border-bronze-accent/40 transition-colors duration-300 spec-card opacity-0 translate-y-4 transition-all duration-700 ease-out">
-    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1">Operación Activa</span>
+    <span class="text-[10px] uppercase font-subhead-tech tracking-wider text-bronze-accent block mb-1" data-es="Operación Activa" data-en="Active Operation">Operación Activa</span>
     <span class="font-display-md text-xl text-snow-white font-bold">24 / 7</span>
-    <span class="text-[11px] text-surface-dim block mt-1">Guardias permanentes</span>
+    <span class="text-[11px] text-surface-dim block mt-1" data-es="Guardias permanentes" data-en="Permanent guard shifts">Guardias permanentes</span>
   </div>
 </div>
 </div>
@@ -943,12 +943,12 @@
 </div>
 </section>
 <!-- Contacto -->
-<section class="pt-12 pb-16 bg-background" id="contacto">
+<section class="py-section-gap bg-background" id="contacto">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
 <div>
-<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block">Contacto</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight">Hablemos de su Proyecto</h2>
+<span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Contacto" data-en="Contact">Contacto</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight" data-es="Hablemos de su Proyecto" data-en="Let's Talk About Your Project">Hablemos de su Proyecto</h2>
 <div class="space-y-6 mt-4">
   <!-- Director -->
   <div class="flex items-start gap-4 p-4 rounded bg-white/40 border border-slate-navy/5 group/director-card">
@@ -956,7 +956,7 @@
       <span class="material-symbols-outlined text-slate-navy group-hover/director-card:text-bronze-accent transition-colors">person</span>
     </div>
     <div>
-      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider">Director Regional</p>
+      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider" data-es="Director Regional" data-en="Regional Director">Director Regional</p>
       <p class="font-body-md text-[14px] md:text-[17px] font-semibold text-primary">Kim Eun Soo</p>
     </div>
   </div>
@@ -966,7 +966,7 @@
       <span class="material-symbols-outlined text-slate-navy group-hover/email-card:text-bronze-accent transition-colors">mail</span>
     </div>
     <div>
-      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider">Email de Consultas</p>
+      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider" data-es="Email de Consultas" data-en="Inquiry Email">Email de Consultas</p>
       <a class="font-body-md text-[14px] md:text-[17px] font-semibold text-bronze-accent hover:underline flex items-center gap-1.5" href="mailto:arg@hy1375.com">
         <span>arg@hy1375.com</span>
         <span class="material-symbols-outlined text-sm">open_in_new</span>
@@ -979,8 +979,8 @@
       <span class="material-symbols-outlined text-slate-navy group-hover/map-card:text-bronze-accent transition-colors">domain</span>
     </div>
     <div>
-      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider">Planta Industrial</p>
-      <p class="font-body-md text-[13px] md:text-[16px] font-semibold text-primary mb-1 leading-snug">Parque Industrial Campo Quijano, Salta, Argentina (A4407)</p>
+      <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider" data-es="Planta Industrial" data-en="Industrial Plant">Planta Industrial</p>
+      <p class="font-body-md text-[13px] md:text-[16px] font-semibold text-primary mb-1 leading-snug" data-es="Parque Industrial Campo Quijano, Salta, Argentina (A4407)" data-en="Campo Quijano Industrial Park, Salta, Argentina (A4407)">Parque Industrial Campo Quijano, Salta, Argentina (A4407)</p>
     </div>
   </div>
 </div>
@@ -988,29 +988,29 @@
 <div class="bg-gradient-to-br from-white to-surface-variant/20 p-6 lg:p-8 border border-surface-variant shadow-lg relative min-h-[320px] flex flex-col justify-center transition-all duration-300 hover:shadow-xl">
 <div id="contact-success-msg" class="hidden text-center py-6 animate-fade-in">
 <span class="material-symbols-outlined text-6xl text-bronze-accent mb-4 block">check_circle</span>
-<h3 class="font-headline-md text-2xl text-primary mb-2">¡Requerimiento Enviado!</h3>
-<p class="text-body-md text-outline">Gracias por contactarnos. Nuestro equipo técnico responderá su solicitud a la brevedad.</p>
+<h3 class="font-headline-md text-2xl text-primary mb-2" data-es="¡Requerimiento Enviado!" data-en="Requirement Sent!">¡Requerimiento Enviado!</h3>
+<p class="text-body-md text-outline" data-es="Gracias por contactarnos. Nuestro equipo técnico responderá su solicitud a la brevedad." data-en="Thank you for contacting us. Our technical team will respond to your request shortly.">Gracias por contactarnos. Nuestro equipo técnico responderá su solicitud a la brevedad.</p>
 </div>
 <form id="contact-form" class="space-y-4">
 <div class="group/input-row">
-<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent">Nombre Completo</label>
-<input id="contact-name" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Ing. Juan Pérez" type="text" required/>
+<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Nombre Completo" data-en="Full Name">Nombre Completo</label>
+<input id="contact-name" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Ing. Juan Pérez" data-es-placeholder="Ej: Ing. Juan Pérez" data-en-placeholder="E.g.: Eng. John Doe" type="text" required/>
 </div>
 <div class="group/input-row">
-<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent">Empresa / Proyecto</label>
-<input id="contact-company" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Mina Litio Norte" type="text" required/>
+<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Empresa / Proyecto" data-en="Company / Project">Empresa / Proyecto</label>
+<input id="contact-company" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Mina Litio Norte" data-es-placeholder="Ej: Mina Litio Norte" data-en-placeholder="E.g.: North Lithium Mine" type="text" required/>
 </div>
 <div class="group/input-row">
-<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent">Email Corporativo</label>
-<input id="contact-email" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="juan.perez@empresa.com" type="email" required/>
+<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Email Corporativo" data-en="Corporate Email">Email Corporativo</label>
+<input id="contact-email" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="juan.perez@empresa.com" data-es-placeholder="juan.perez@empresa.com" data-en-placeholder="john.doe@company.com" type="email" required/>
 </div>
 <div class="group/input-row">
-<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent">Mensaje / Especificaciones</label>
-<textarea id="contact-message" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Detalle su requerimiento de tanques o servicios..." rows="3" required></textarea>
+<label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Mensaje / Especificaciones" data-en="Message / Specifications">Mensaje / Especificaciones</label>
+<textarea id="contact-message" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Detalle su requerimiento de tanques o servicios..." data-es-placeholder="Detalle su requerimiento de tanques o servicios..." data-en-placeholder="Detail your requirement for tanks or services..." rows="3" required></textarea>
 </div>
 <button id="contact-submit-btn" class="w-full bg-primary text-snow-white py-3 font-subhead-tech uppercase tracking-widest hover:bg-bronze-accent transition-all flex items-center justify-center gap-2 group/btn" type="submit">
-                            <span>Enviar</span>
-                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                             <span data-es="Enviar" data-en="Send">Enviar</span>
+                             <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform duration-300">arrow_forward</span>
 </button>
 </form>
 </div>
@@ -1022,9 +1022,9 @@
   <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
     <div class="flex items-center gap-3">
       <img src="logo.png?v=2" alt="HY Ingeniería Logo" class="h-7 w-auto object-contain" />
-      <span class="font-display-lg text-[16px] font-bold text-bronze-accent">HY Ingeniería S.A.U.</span>
+      <span class="font-display-lg text-[16px] font-bold text-bronze-accent">HY Ingeniería S.A.</span>
     </div>
-    <p class="text-[11px] text-surface-dim/70">© 2026 HY Ingeniería S.A.U. Todos los derechos reservados.</p>
+    <p class="text-[11px] text-surface-dim/70" data-es="© 2026 HY Ingeniería S.A. Todos los derechos reservados." data-en="© 2026 HY Ingeniería S.A. All rights reserved.">© 2026 HY Ingeniería S.A. Todos los derechos reservados.</p>
   </div>
 </footer>
 <script>
@@ -1264,6 +1264,54 @@
             }
 
             // Toggle capabilities cards on mobile click/tap
+            // Translation Logic
+            let currentLang = 'es';
+            const changeLanguage = (lang) => {
+                currentLang = lang;
+                document.querySelectorAll('[data-es]').forEach(el => {
+                    const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-es');
+                    if (text !== null) {
+                        el.innerHTML = text;
+                    }
+                });
+                document.querySelectorAll('[data-es-placeholder]').forEach(el => {
+                    const placeholder = lang === 'en' ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-es-placeholder');
+                    if (placeholder !== null) {
+                        el.setAttribute('placeholder', placeholder);
+                    }
+                });
+                
+                // Toggle active flag styling opacity and underline
+                const esBtn = document.getElementById('lang-es-btn');
+                const enBtn = document.getElementById('lang-en-btn');
+                const underlineClasses = ['underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4'];
+                if (lang === 'en') {
+                    if (esBtn) {
+                        esBtn.classList.add('opacity-50');
+                        esBtn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                    }
+                    if (enBtn) {
+                        enBtn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                        enBtn.classList.remove('opacity-50');
+                    }
+                } else {
+                    if (esBtn) {
+                        esBtn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                        esBtn.classList.remove('opacity-50');
+                    }
+                    if (enBtn) {
+                        enBtn.classList.add('opacity-50');
+                        enBtn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                    }
+                }
+            };
+
+            const langEsBtn = document.getElementById('lang-es-btn');
+            const langEnBtn = document.getElementById('lang-en-btn');
+            if (langEsBtn) langEsBtn.addEventListener('click', () => changeLanguage('es'));
+            if (langEnBtn) langEnBtn.addEventListener('click', () => changeLanguage('en'));
+
+            // Toggle capabilities cards on mobile click/tap
             document.querySelectorAll('.card-supply').forEach(card => {
                 card.addEventListener('click', () => {
                     card.classList.toggle('expanded');
@@ -1282,12 +1330,13 @@
                     // Show Loading state
                     contactSubmitBtn.disabled = true;
                     const originalBtnContent = contactSubmitBtn.innerHTML;
+                    const loadingText = currentLang === 'en' ? 'Processing...' : 'Procesando...';
                     contactSubmitBtn.innerHTML = `
                         <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-snow-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span>Procesando...</span>
+                        <span>${loadingText}</span>
                     `;
 
                     // Simulate API post request delay (1.2 seconds)
