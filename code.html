@@ -3,12 +3,8 @@
 <html class="scroll-smooth" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<<<<<<< HEAD
 <title>HY Ingeniería S.A. | Ingeniería Coreana, Presencia Local</title>
-=======
-<title>HY Ingeniería S.A.U. | Ingeniería Coreana, Presencia Local</title>
 <link rel="icon" type="image/png" href="logo.png?v=2" />
->>>>>>> 3fbd3504e0f2ece123a38ae13182b985168959c4
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -137,6 +133,8 @@
       .card-supply {
         flex: 1;
         transition: all 1.0s cubic-bezier(0.25, 1, 0.3, 1);
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
       }
       @media (min-width: 1024px) {
         .card-supply:hover {
@@ -246,9 +244,18 @@
       }
 
       @media (max-width: 1023px) {
+        .card-supply > div {
+          gap: 0px !important;
+        }
+        .card-supply .extra-info {
+          padding-top: 0px !important;
+          margin-top: 0px !important;
+        }
         .card-supply.expanded .extra-info {
           max-height: 350px !important;
           opacity: 1 !important;
+          padding-top: 12px !important;
+          margin-top: 12px !important;
         }
         .card-supply.expanded .arrow-icon {
           transform: rotate(180deg) !important;
@@ -288,11 +295,11 @@
 <a class="nav-link-slide text-snow-white hover:text-bronze-accent transition-colors py-1" href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
 </nav>
 <div class="flex-1 flex justify-end items-center gap-4">
-<div class="flex items-center gap-2 mr-2 font-subhead-tech text-[13px] text-snow-white uppercase tracking-wider">
+<div class="hidden md:flex items-center gap-2 mr-2 font-subhead-tech text-[13px] text-snow-white uppercase tracking-wider">
   <span class="material-symbols-outlined text-lg text-snow-white/60 select-none mr-0.5">language</span>
-  <button id="lang-es-btn" class="focus:outline-none transition-all duration-300 opacity-100 underline decoration-bronze-accent decoration-2 underline-offset-4" title="Español">ESP</button>
+  <button class="lang-es-btn focus:outline-none transition-all duration-300 opacity-100 underline decoration-bronze-accent decoration-2 underline-offset-4" title="Español">ESP</button>
   <span class="text-white/20 select-none">|</span>
-  <button id="lang-en-btn" class="focus:outline-none transition-all duration-300 opacity-50 hover:opacity-100" title="English">EN</button>
+  <button class="lang-en-btn focus:outline-none transition-all duration-300 opacity-50 hover:opacity-100" title="English">EN</button>
 </div>
 <a class="hidden md:inline-block btn-liquid-glass-primary px-6 py-2 font-subhead-tech uppercase font-bold" href="#contacto" data-es="Contacto" data-en="Contact">
             Contacto
@@ -305,9 +312,19 @@
 
 <!-- Mobile Navigation Drawer -->
 <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-72 bg-primary border-l border-bronze-accent/45 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-8 gap-8">
-  <button id="mobile-menu-close" class="absolute top-6 right-6 text-snow-white hover:text-bronze-accent transition-colors focus:outline-none" aria-label="Cerrar menú">
-    <span class="material-symbols-outlined text-3xl">close</span>
-  </button>
+  <div class="absolute top-6 left-6 right-6 flex justify-between items-center">
+    <!-- Language Selector on the left -->
+    <div class="flex items-center gap-2 font-subhead-tech text-[13px] text-snow-white uppercase tracking-wider">
+      <span class="material-symbols-outlined text-lg text-snow-white/60 select-none mr-0.5">language</span>
+      <button class="lang-es-btn focus:outline-none transition-all duration-300 opacity-100 underline decoration-bronze-accent decoration-2 underline-offset-4" title="Español">ESP</button>
+      <span class="text-white/20 select-none">|</span>
+      <button class="lang-en-btn focus:outline-none transition-all duration-300 opacity-50 hover:opacity-100" title="English">EN</button>
+    </div>
+    <!-- Close button on the right -->
+    <button id="mobile-menu-close" class="text-snow-white hover:text-bronze-accent transition-colors focus:outline-none flex items-center" aria-label="Cerrar menú">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+  </div>
   <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#estructura-operativa" data-es="Estructura Operativa" data-en="Operational Structure">Estructura Operativa</a>
   <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#servicios" data-es="Servicios" data-en="Services">Servicios</a>
   <a class="text-snow-white hover:text-bronze-accent font-subhead-tech uppercase tracking-[0.15em] text-sm transition-colors mobile-link pb-3 border-b border-white/10 w-full" href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
@@ -396,7 +413,7 @@
 </section>
 
 <!-- La Tesis (Modelo Dual) -->
-<section id="estructura-operativa" class="py-section-gap bg-surface-container-lowest overflow-hidden">
+<section id="estructura-operativa" class="py-12 md:py-16 bg-surface-container-lowest overflow-hidden">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-7xl">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div class="fade-in-left opacity-0 -translate-x-8 transition-all duration-[1200ms] ease-out">
@@ -430,7 +447,7 @@
 </div>
 </div>
 <!-- Respaldo en Números (Estadísticas) -->
-<div class="mt-20 border-t border-surface-variant/30 pt-16 w-full">
+<div class="mt-8 pt-4 w-full">
   <div id="stats-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8 w-full relative z-20">
       <!-- Card 1 -->
       <div class="bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex flex-col justify-between h-full stats-card-entrance">
@@ -461,7 +478,7 @@
         </div>
       </div>
       <!-- Card 3 -->
-      <div class="bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex flex-col justify-between h-full stats-card-entrance">
+      <div class="hidden sm:flex bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex-col justify-between h-full stats-card-entrance">
         <div class="flex flex-row md:flex-col items-center md:items-start gap-3 md:gap-0">
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="244" data-suffix="+">0+</div>
           <div class="line-accent mb-3 hidden md:block"></div>
@@ -475,7 +492,7 @@
         </div>
       </div>
       <!-- Card 4 -->
-      <div class="bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex flex-col justify-between h-full stats-card-entrance">
+      <div class="hidden sm:flex bg-white p-2.5 md:p-6 shadow-md border-t-4 border-bronze-accent industrial-card-hover flex-col justify-between h-full stats-card-entrance">
         <div class="flex flex-row md:flex-col items-center md:items-start gap-3 md:gap-0">
           <div class="font-display-lg text-[26px] md:text-[40px] text-bronze-accent shrink-0 count-number" data-target="4" data-prefix="2-" data-suffix="">0</div>
           <div class="line-accent mb-3 hidden md:block"></div>
@@ -503,7 +520,7 @@
 </div>
 </div>
 <div class="flex flex-col lg:flex-row gap-2.5 lg:gap-3 w-full min-h-[255px] items-stretch lg:justify-between">
-<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md lg:hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto lg:hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
 <div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
@@ -511,7 +528,8 @@
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">rebase_edit</span>
 <h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tanques y Reactores FRP" data-en="FRP Tanks &amp; Reactors">Tanques y Reactores FRP</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Reforzados con fibra de vidrio para máxima resistencia química en minería." data-en="Fiberglass reinforced for maximum chemical resistance in mining.">Reforzados con fibra de vidrio para máxima resistencia química en minería.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed inline" data-es="Reforzados con fibra de vidrio para máxima resistencia química en minería." data-en="Fiberglass reinforced for maximum chemical resistance in mining.">Reforzados con fibra de vidrio para máxima resistencia química en minería.</p>
+<span class="arrow-icon material-symbols-outlined text-bronze-accent lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg align-middle inline-block ml-1">keyboard_arrow_down</span>
 </div>
 <span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Fabricación Local" data-en="Local Fabrication">Fabricación Local</span>
 </div>
@@ -545,10 +563,9 @@
 </div>
 </div>
 </div>
-<span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 2 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md lg:hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto lg:hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
 <div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
@@ -556,7 +573,8 @@
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">propane_tank</span>
 <h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tanques de Acero Inox (STS)" data-en="Stainless Steel Tanks (STS)">Tanques de Acero Inox (STS)</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Acabados de alta precisión para dimensiones que superan los límites del FRP." data-en="High-precision finishes for dimensions exceeding FRP limits.">Acabados de alta precisión para dimensiones que superan los límites del FRP.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed inline" data-es="Acabados de alta precisión para dimensiones que superan los límites del FRP." data-en="High-precision finishes for dimensions exceeding FRP limits.">Acabados de alta precisión para dimensiones que superan los límites del FRP.</p>
+<span class="arrow-icon material-symbols-outlined text-bronze-accent lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg align-middle inline-block ml-1">keyboard_arrow_down</span>
 </div>
 <span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Normas Coreanas" data-en="Korean Standards">Normas Coreanas</span>
 </div>
@@ -590,10 +608,9 @@
 </div>
 </div>
 </div>
-<span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 3 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md lg:hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto lg:hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
 <div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
@@ -601,7 +618,8 @@
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">schema</span>
 <h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Tuberías y Piping FRP" data-en="FRP Piping &amp; Systems">Tuberías y Piping FRP</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación." data-en="Transportation systems for highly corrosive fluids and ventilation ducts.">Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed inline" data-es="Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación." data-en="Transportation systems for highly corrosive fluids and ventilation ducts.">Sistemas de transporte de fluidos altamente corrosivos y ductos de ventilación.</p>
+<span class="arrow-icon material-symbols-outlined text-bronze-accent lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg align-middle inline-block ml-1">keyboard_arrow_down</span>
 </div>
 <span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Resistencia Extrema" data-en="Extreme Resistance">Resistencia Extrema</span>
 </div>
@@ -635,10 +653,9 @@
 </div>
 </div>
 </div>
-<span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 4 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md lg:hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto lg:hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
 <div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
@@ -646,7 +663,8 @@
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">heat_pump</span>
 <h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Bombas Especiales" data-en="Special Pumps">Bombas Especiales</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Equipamiento industrial de alta gama importado de la casa matriz en Corea." data-en="High-end industrial equipment imported from headquarters in Korea.">Equipamiento industrial de alta gama importado de la casa matriz en Corea.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed inline" data-es="Equipamiento industrial de alta gama importado de la casa matriz en Corea." data-en="High-end industrial equipment imported from headquarters in Korea.">Equipamiento industrial de alta gama importado de la casa matriz en Corea.</p>
+<span class="arrow-icon material-symbols-outlined text-bronze-accent lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg align-middle inline-block ml-1">keyboard_arrow_down</span>
 </div>
 <span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Exclusividad HY" data-en="HY Exclusivity">Exclusividad HY</span>
 </div>
@@ -680,10 +698,9 @@
 </div>
 </div>
 </div>
-<span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 <!-- Card 5 -->
-<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto hover:z-10 relative cursor-pointer">
+<div class="card-supply bg-white p-3 md:p-4 lg:px-3 lg:py-5 border-t-4 border-bronze-accent shadow-md lg:hover:shadow-2xl overflow-hidden group flex flex-col items-stretch h-auto lg:hover:z-10 relative cursor-pointer">
 <div class="flex flex-col lg:flex-row gap-3 lg:gap-0 items-stretch w-full h-full">
 <div class="w-full lg:w-[110px] lg:shrink-0 flex flex-col justify-between h-full py-1">
 <div>
@@ -691,7 +708,8 @@
 <span class="material-symbols-outlined text-2xl lg:text-3xl text-slate-navy lg:mb-2 block">engineering</span>
 <h4 class="font-headline-md text-[16px] lg:text-[17px] text-primary leading-snug" data-es="Instalación y Servicio" data-en="Installation &amp; Service">Instalación y Servicio</h4>
 </div>
-<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed" data-es="Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo." data-en="Resident technical team in Campo Quijano for preventive and corrective support.">Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo.</p>
+<p class="text-body-md text-outline mb-2 lg:mb-3 leading-relaxed inline" data-es="Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo." data-en="Resident technical team in Campo Quijano for preventive and corrective support.">Equipo técnico residente en Campo Quijano para soporte preventivo and correctivo.</p>
+<span class="arrow-icon material-symbols-outlined text-bronze-accent lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg align-middle inline-block ml-1">keyboard_arrow_down</span>
 </div>
 <span class="font-label-sm text-label-sm text-bronze-accent uppercase tracking-tighter mt-1 lg:mt-3 block hidden lg:block" data-es="Soporte Local" data-en="Local Support">Soporte Local</span>
 </div>
@@ -725,14 +743,13 @@
 </div>
 </div>
 </div>
-<span class="arrow-icon material-symbols-outlined text-bronze-accent absolute bottom-2 right-2 lg:hidden transition-transform duration-300 lg:group-hover:rotate-180 text-lg">keyboard_arrow_down</span>
 </div>
 </div>
 </div>
 </section>
 
 <!-- Trayectoria y Proyectos Hitos -->
-<section class="relative lg:h-[150vh] bg-white" id="proyectos">
+<section class="relative lg:h-[250vh] bg-white" id="proyectos">
   <div class="hidden lg:flex sticky top-[calc(50vh-270px)] h-[540px] flex-col justify-center overflow-hidden border-b border-surface-variant/30">
     <div class="container mx-auto px-margin-desktop mb-4">
       <span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Hitos Clave" data-en="Key Milestones">Hitos Clave</span>
@@ -749,7 +766,7 @@
         </div>
         
         <!-- Hito 1: 1980 (Odd - Content above circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Fundación de Casa Matriz" data-en="Headquarters Foundation">Fundación de Casa Matriz</h3>
             <p class="text-body-md text-outline leading-relaxed" data-es="Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur." data-en="Establishment of Han Young Co., Ltd. in Gyeongju, South Korea.">Establecimiento de Han Young Co., Ltd. en Gyeongju, Corea del Sur.</p>
@@ -758,7 +775,7 @@
         </div>
         
         <!-- Hito 2: 2005-14 (Even - Content below circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-[15px] font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2005-14</div>
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Certificaciones Globales" data-en="Global Certifications">Certificaciones Globales</h3>
@@ -767,7 +784,7 @@
         </div>
         
         <!-- Hito 3: 2011-12 (Odd - Content above circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Planta Piloto Cauchari" data-en="Cauchari Pilot Plant">Planta Piloto Cauchari</h3>
             <p class="text-body-md text-outline leading-relaxed" data-es="Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio." data-en="First supply of 26 tanks, pumps, and piping for lithium pilot testing.">Primer suministro de 26 tanques, bombas y tuberías para pruebas piloto de litio.</p>
@@ -776,7 +793,7 @@
         </div>
         
         <!-- Hito 4: 2016 (Even - Content below circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-snow-white text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2016</div>
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="Filial Argentina" data-en="Argentina Branch">Filial Argentina</h3>
@@ -785,7 +802,7 @@
         </div>
         
         <!-- Hito 5: 2020 (Odd - Content above circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Planta Demo NOA" data-en="NOA Demo Plant">Planta Demo NOA</h3>
             <p class="text-body-md text-outline leading-relaxed" data-es="Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral." data-en="Construction and installation of 28 tanks, 86 chemical pumps, and comprehensive commissioning.">Construcción e instalación de 28 tanques, 86 bombas químicas y comisionamiento integral.</p>
@@ -794,7 +811,7 @@
         </div>
         
         <!-- Hito 6: 2022 (Even - Content below circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2022</div>
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="Proyecto NOA - Fase 1" data-en="NOA Project - Phase 1">Proyecto NOA - Fase 1</h3>
@@ -803,7 +820,7 @@
         </div>
         
         <!-- Hito 7: 2024 (Odd - Content above circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-end w-[280px] h-[320px] pb-[220px] relative z-10">
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1 leading-snug" data-es="Proyecto NOA - Fase 2" data-en="NOA Project - Phase 2">Proyecto NOA - Fase 2</h3>
             <p class="text-body-md text-outline leading-relaxed" data-es="Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas." data-en="Large-scale supply of 81 FRP tanks, 14 STS tanks, and 125 chemical pumps.">Suministro a gran escala de 81 tanques FRP, 14 tanques STS y 125 bombas químicas.</p>
@@ -812,7 +829,7 @@
         </div>
         
         <!-- Hito 8: 2026+ (Even - Content below circle) -->
-        <div class="timeline-item opacity-0 translate-y-8 flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
+        <div class="timeline-item flex flex-col items-center justify-start w-[280px] h-[320px] pt-[220px] relative z-10">
           <div class="timeline-circle w-20 h-20 rounded-full bg-primary border-4 border-bronze-accent flex items-center justify-center text-xl font-extrabold shadow-lg absolute top-[120px] transition-all duration-300">2026+</div>
           <div class="text-center px-4 max-w-[260px]">
             <h3 class="font-headline-md text-[17px] text-primary mb-1.5 leading-snug" data-es="EPC &amp; Expansión" data-en="EPC &amp; Expansion">EPC &amp; Expansión</h3>
@@ -950,7 +967,7 @@
 <!-- Contacto -->
 <section class="py-section-gap bg-background" id="contacto">
 <div class="container mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
 <div>
 <span class="font-subhead-tech text-subhead-tech text-bronze-accent uppercase tracking-widest mb-4 block" data-es="Contacto" data-en="Contact">Contacto</span>
 <h2 class="font-display-lg text-display-lg-mobile md:text-[44px] text-primary mb-8 leading-tight" data-es="Hablemos de su Proyecto" data-en="Let's Talk About Your Project">Hablemos de su Proyecto</h2>
@@ -972,8 +989,8 @@
     </div>
     <div>
       <p class="font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider" data-es="Email de Consultas" data-en="Inquiry Email">Email de Consultas</p>
-      <a class="font-body-md text-[14px] md:text-[17px] font-semibold text-bronze-accent hover:underline flex items-center gap-1.5" href="mailto:arg@hy1375.com">
-        <span>arg@hy1375.com</span>
+      <a class="font-body-md text-[14px] md:text-[17px] font-semibold text-bronze-accent hover:underline flex items-center gap-1.5" href="mailto:admistracion@hy-ingenieria.com.ar">
+        <span>admistracion@hy-ingenieria.com.ar</span>
         <span class="material-symbols-outlined text-sm">open_in_new</span>
       </a>
     </div>
@@ -996,22 +1013,28 @@
 <h3 class="font-headline-md text-2xl text-primary mb-2" data-es="¡Requerimiento Enviado!" data-en="Requirement Sent!">¡Requerimiento Enviado!</h3>
 <p class="text-body-md text-outline" data-es="Gracias por contactarnos. Nuestro equipo técnico responderá su solicitud a la brevedad." data-en="Thank you for contacting us. Our technical team will respond to your request shortly.">Gracias por contactarnos. Nuestro equipo técnico responderá su solicitud a la brevedad.</p>
 </div>
-<form id="contact-form" class="space-y-4">
+<form id="contact-form" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
+<!-- Configuración de Web3Forms -->
+<input type="hidden" name="access_key" value="0d834e45-27bb-415a-8251-0de26efa5ed1"/>
+<input type="hidden" name="subject" value="Nuevo Contacto Web - HY Ingeniería"/>
+<input type="hidden" name="from_name" value="Web HY Ingeniería"/>
+<!-- Protección básica contra bots (Honeypot) -->
+<input type="checkbox" name="botcheck" class="hidden" style="display: none;"/>
 <div class="group/input-row">
 <label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Nombre Completo" data-en="Full Name">Nombre Completo</label>
-<input id="contact-name" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Ing. Juan Pérez" data-es-placeholder="Ej: Ing. Juan Pérez" data-en-placeholder="E.g.: Eng. John Doe" type="text" required/>
+<input id="contact-name" name="name" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Ing. Juan Pérez" data-es-placeholder="Ej: Ing. Juan Pérez" data-en-placeholder="E.g.: Eng. John Doe" type="text" required/>
 </div>
 <div class="group/input-row">
 <label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Empresa / Proyecto" data-en="Company / Project">Empresa / Proyecto</label>
-<input id="contact-company" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Mina Litio Norte" data-es-placeholder="Ej: Mina Litio Norte" data-en-placeholder="E.g.: North Lithium Mine" type="text" required/>
+<input id="contact-company" name="empresa" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Ej: Mina Litio Norte" data-es-placeholder="Ej: Mina Litio Norte" data-en-placeholder="E.g.: North Lithium Mine" type="text" required/>
 </div>
 <div class="group/input-row">
 <label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Email Corporativo" data-en="Corporate Email">Email Corporativo</label>
-<input id="contact-email" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="juan.perez@empresa.com" data-es-placeholder="juan.perez@empresa.com" data-en-placeholder="john.doe@company.com" type="email" required/>
+<input id="contact-email" name="email" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="juan.perez@empresa.com" data-es-placeholder="juan.perez@empresa.com" data-en-placeholder="john.doe@company.com" type="email" required/>
 </div>
 <div class="group/input-row">
 <label class="block font-subhead-tech text-[10px] text-outline uppercase mb-0.5 tracking-wider transition-colors group-focus-within/input-row:text-bronze-accent" data-es="Mensaje / Especificaciones" data-en="Message / Specifications">Mensaje / Especificaciones</label>
-<textarea id="contact-message" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Detalle su requerimiento de tanques o servicios..." data-es-placeholder="Detalle su requerimiento de tanques o servicios..." data-en-placeholder="Detail your requirement for tanks or services..." rows="3" required></textarea>
+<textarea id="contact-message" name="mensaje" class="w-full border-0 border-b-2 border-surface-variant focus:ring-0 focus:border-bronze-accent bg-transparent py-1.5 placeholder-surface-dim transition-colors text-sm" placeholder="Detalle su requerimiento de tanques o servicios..." data-es-placeholder="Detalle su requerimiento de tanques o servicios..." data-en-placeholder="Detail your requirement for tanks or services..." rows="3" required></textarea>
 </div>
 <button id="contact-submit-btn" class="w-full bg-primary text-snow-white py-3 font-subhead-tech uppercase tracking-widest hover:bg-bronze-accent transition-all flex items-center justify-center gap-2 group/btn" type="submit">
                              <span data-es="Enviar" data-en="Send">Enviar</span>
@@ -1102,7 +1125,7 @@
             const counters = document.querySelectorAll('.count-number');
             
             const countNumbers = () => {
-                const durations = [2800, 2000, 3000, 1500]; // Staggered durations for each card
+                const durations = [1000, 800, 1200, 600]; // Speed up numbers animation (durations in ms)
                 counters.forEach((counter, idx) => {
                     const target = parseInt(counter.getAttribute('data-target'), 10);
                     const suffix = counter.getAttribute('data-suffix') || '';
@@ -1168,26 +1191,9 @@
                 ubicObserver.observe(ubicacionSection);
             }
 
-            // Timeline Items Animation (Staggered Fade-in)
+            // Timeline Items Animation (Staggered Fade-in) - Removed as per user request to remove entry animation of circles/items
             const timelineTrack = document.querySelector('#timeline-track');
             const timelineItems = document.querySelectorAll('.timeline-item');
-            
-            const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        timelineItems.forEach((item, index) => {
-                            setTimeout(() => {
-                                item.classList.remove('opacity-0', 'translate-y-8');
-                            }, index * 120); // 120ms stagger
-                        });
-                        timelineObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            if (timelineTrack) {
-                timelineObserver.observe(timelineTrack);
-            }
 
             // Horizontal scroll timeline on vertical scroll (Desktop only)
             const proyectosSection = document.querySelector('#proyectos');
@@ -1286,35 +1292,36 @@
                     }
                 });
                 
+                // Reset custom validation messages on language change
+                const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+                formInputs.forEach(input => input.setCustomValidity(''));
+                
                 // Toggle active flag styling opacity and underline
-                const esBtn = document.getElementById('lang-es-btn');
-                const enBtn = document.getElementById('lang-en-btn');
-                const underlineClasses = ['underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4'];
+                const esBtns = document.querySelectorAll('.lang-es-btn');
+                const enBtns = document.querySelectorAll('.lang-en-btn');
                 if (lang === 'en') {
-                    if (esBtn) {
-                        esBtn.classList.add('opacity-50');
-                        esBtn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
-                    }
-                    if (enBtn) {
-                        enBtn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
-                        enBtn.classList.remove('opacity-50');
-                    }
+                    esBtns.forEach(btn => {
+                        btn.classList.add('opacity-50');
+                        btn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                    });
+                    enBtns.forEach(btn => {
+                        btn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                        btn.classList.remove('opacity-50');
+                    });
                 } else {
-                    if (esBtn) {
-                        esBtn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
-                        esBtn.classList.remove('opacity-50');
-                    }
-                    if (enBtn) {
-                        enBtn.classList.add('opacity-50');
-                        enBtn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
-                    }
+                    esBtns.forEach(btn => {
+                        btn.classList.add('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                        btn.classList.remove('opacity-50');
+                    });
+                    enBtns.forEach(btn => {
+                        btn.classList.add('opacity-50');
+                        btn.classList.remove('opacity-100', 'underline', 'decoration-bronze-accent', 'decoration-2', 'underline-offset-4');
+                    });
                 }
             };
 
-            const langEsBtn = document.getElementById('lang-es-btn');
-            const langEnBtn = document.getElementById('lang-en-btn');
-            if (langEsBtn) langEsBtn.addEventListener('click', () => changeLanguage('es'));
-            if (langEnBtn) langEnBtn.addEventListener('click', () => changeLanguage('en'));
+            document.querySelectorAll('.lang-es-btn').forEach(btn => btn.addEventListener('click', () => changeLanguage('es')));
+            document.querySelectorAll('.lang-en-btn').forEach(btn => btn.addEventListener('click', () => changeLanguage('en')));
 
             // Toggle capabilities cards on mobile click/tap
             document.querySelectorAll('.card-supply').forEach(card => {
@@ -1323,16 +1330,41 @@
                 });
             });
 
-            // Contact Form Interactive Submit
+            // Contact Form Interactive Submit & Custom Validation Warnings
             const contactForm = document.getElementById('contact-form');
             const contactSuccess = document.getElementById('contact-success-msg');
             const contactSubmitBtn = document.getElementById('contact-submit-btn');
 
             if (contactForm) {
+                const formInputs = contactForm.querySelectorAll('input, textarea');
+                
+                // Add custom validation messages based on current language
+                formInputs.forEach(input => {
+                    input.addEventListener('invalid', () => {
+                        if (currentLang === 'es') {
+                            if (input.validity.valueMissing) {
+                                input.setCustomValidity('Por favor, complete este campo.');
+                            } else if (input.validity.typeMismatch) {
+                                input.setCustomValidity('Por favor, introduzca una dirección de correo válida.');
+                            }
+                        } else {
+                            if (input.validity.valueMissing) {
+                                input.setCustomValidity('Please fill out this field.');
+                            } else if (input.validity.typeMismatch) {
+                                input.setCustomValidity('Please enter a valid email address.');
+                            }
+                        }
+                    });
+                    
+                    input.addEventListener('input', () => {
+                        input.setCustomValidity('');
+                    });
+                });
+
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
                     
-                    // Show Loading state
+                    // Mostrar estado de carga en el botón
                     contactSubmitBtn.disabled = true;
                     const originalBtnContent = contactSubmitBtn.innerHTML;
                     const loadingText = currentLang === 'en' ? 'Processing...' : 'Procesando...';
@@ -1343,18 +1375,35 @@
                         </svg>
                         <span>${loadingText}</span>
                     `;
-
-                    // Simulate API post request delay (1.2 seconds)
-                    setTimeout(() => {
-                        // Reset submit button state
+                    // Recopilar los datos del formulario
+                    const formData = new FormData(contactForm);
+                    
+                    // Enviar petición real a Web3Forms
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            // Ocultar formulario y mostrar mensaje de éxito nativo
+                            contactForm.classList.add('hidden');
+                            contactSuccess.classList.remove('hidden');
+                            contactForm.reset();
+                        } else {
+                            console.log(response);
+                            alert(json.message || (currentLang === 'en' ? 'Something went wrong!' : '¡Algo salió mal!'));
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        alert(currentLang === 'en' ? 'Network error, please try again.' : 'Error de red, por favor intente nuevamente.');
+                    })
+                    .finally(() => {
+                        // Restaurar botón de envío
                         contactSubmitBtn.disabled = false;
                         contactSubmitBtn.innerHTML = originalBtnContent;
-
-                        // Hide Form & Show Success Message
-                        contactForm.classList.add('hidden');
-                        contactSuccess.classList.remove('hidden');
-                        contactForm.reset();
-                    }, 1200);
+                    });
                 });
             }
 
